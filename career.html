@@ -1,0 +1,3556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Career Connect | Chandini Connects</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#f8f4ef;
+    color:#30262b;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+button{
+    font-family:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+:root{
+    --cream:#f8f4ef;
+    --cream-dark:#eee5dc;
+    --white:#fffdfb;
+    --plum:#30262b;
+    --plum-light:#51454b;
+    --terracotta:#b86f55;
+    --terracotta-dark:#9e5941;
+    --gold:#c69b67;
+    --border:#e7dbd1;
+    --muted:#756a6d;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    background:rgba(248,244,239,.90);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(48,38,43,.08);
+}
+
+.nav-inner{
+    min-height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1.2px;
+    white-space:nowrap;
+}
+
+.logo span{
+    color:var(--terracotta);
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:27px;
+}
+
+.nav-links > a{
+    position:relative;
+    font-size:13px;
+    font-weight:500;
+    color:#493e43;
+    padding:8px 0;
+}
+
+.nav-links > a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:1px;
+    width:0;
+    height:2px;
+    border-radius:10px;
+    background:var(--terracotta);
+    transition:.3s ease;
+}
+
+.nav-links > a:hover::after,
+.nav-links > a.active::after{
+    width:100%;
+}
+
+.nav-links > a.active{
+    color:var(--plum);
+    font-weight:700;
+}
+
+.socials{
+    display:flex;
+    gap:7px;
+}
+
+.social-btn{
+    padding:8px 13px;
+    border:1px solid #ddcfc4;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:700;
+    transition:.3s ease;
+}
+
+.social-btn:hover{
+    background:var(--plum);
+    color:white;
+    border-color:var(--plum);
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    color:var(--plum);
+    font-size:26px;
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    color:var(--terracotta);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2.8px;
+    margin-bottom:21px;
+}
+
+.eyebrow::before{
+    content:"";
+    width:30px;
+    height:1px;
+    background:var(--terracotta);
+}
+
+.center-eyebrow{
+    justify-content:center;
+}
+
+.section-heading{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 55px;
+}
+
+.section-heading h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,4.5vw,55px);
+    font-weight:600;
+    line-height:1.12;
+    letter-spacing:-1px;
+}
+
+.section-heading p{
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.8;
+    margin-top:16px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    position:relative;
+    padding:88px 0 100px;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:430px;
+    height:430px;
+    border-radius:50%;
+    background:rgba(184,111,85,.07);
+    top:-190px;
+    right:-170px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.02fr .98fr;
+    gap:75px;
+    align-items:center;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(52px,6.2vw,82px);
+    font-weight:600;
+    line-height:1.02;
+    letter-spacing:-2px;
+    margin-bottom:27px;
+}
+
+.hero h1 span{
+    color:var(--terracotta);
+}
+
+.hero-text{
+    max-width:590px;
+    color:var(--muted);
+    font-size:16px;
+    line-height:1.85;
+    margin-bottom:34px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.primary-btn,
+.secondary-btn{
+    min-height:48px;
+    padding:0 23px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:4px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.5px;
+    transition:.3s ease;
+}
+
+.primary-btn{
+    background:var(--plum);
+    color:white;
+    box-shadow:0 12px 25px rgba(48,38,43,.13);
+}
+
+.primary-btn:hover{
+    background:var(--terracotta);
+    transform:translateY(-3px);
+}
+
+.secondary-btn{
+    border:1px solid #d9cbc0;
+    color:var(--plum);
+}
+
+.secondary-btn:hover{
+    border-color:var(--terracotta);
+    color:var(--terracotta);
+    transform:translateY(-3px);
+}
+
+
+/* HERO IMAGE */
+
+.hero-visual{
+    position:relative;
+    min-height:560px;
+}
+
+.hero-photo-wrap{
+    position:absolute;
+    width:78%;
+    height:540px;
+    right:0;
+    top:0;
+    border-radius:190px 190px 14px 14px;
+    overflow:hidden;
+    background:#ddd0c5;
+}
+
+.hero-photo{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-photo-wrap::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        180deg,
+        rgba(48,38,43,0) 50%,
+        rgba(48,38,43,.18)
+    );
+}
+
+.hero-outline{
+    position:absolute;
+    width:78%;
+    height:540px;
+    right:25px;
+    top:18px;
+    border:1px solid rgba(184,111,85,.45);
+    border-radius:190px 190px 14px 14px;
+}
+
+.hero-card{
+    position:absolute;
+    z-index:3;
+    left:0;
+    bottom:42px;
+    width:235px;
+    background:rgba(255,253,251,.97);
+    padding:23px 24px;
+    box-shadow:0 20px 50px rgba(48,38,43,.14);
+}
+
+.hero-card small{
+    display:block;
+    color:var(--terracotta);
+    text-transform:uppercase;
+    letter-spacing:1.7px;
+    font-size:9px;
+    font-weight:700;
+    margin-bottom:7px;
+}
+
+.hero-card strong{
+    display:block;
+    font-family:"Playfair Display",serif;
+    font-size:22px;
+    line-height:1.25;
+}
+
+.hero-card-line{
+    margin-top:15px;
+    width:40px;
+    height:2px;
+    background:var(--gold);
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+    padding:105px 0 60px;
+    text-align:center;
+}
+
+.intro h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,4.5vw,55px);
+    line-height:1.12;
+}
+
+.intro p{
+    max-width:700px;
+    margin:20px auto 0;
+    color:var(--muted);
+    font-size:15px;
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   NEW — SUPPORT HIGHLIGHTS
+========================================================= */
+
+.highlights{
+    padding:25px 0 90px;
+}
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.highlight{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:20px 18px;
+    background:var(--white);
+    border:1px solid var(--border);
+    transition:.3s ease;
+}
+
+.highlight:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(48,38,43,.07);
+}
+
+.highlight-icon{
+    width:43px;
+    height:43px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:#f1e1d7;
+    color:var(--terracotta);
+    font-size:14px;
+    font-weight:700;
+}
+
+.highlight strong{
+    display:block;
+    font-size:13px;
+    margin-bottom:2px;
+}
+
+.highlight span{
+    color:var(--muted);
+    font-size:10px;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services{
+    padding:25px 0 110px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    position:relative;
+    background:var(--white);
+    border:1px solid var(--border);
+    overflow:hidden;
+    transition:.4s ease;
+}
+
+.service-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background:var(--terracotta);
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.4s ease;
+}
+
+.service-card:hover{
+    transform:translateY(-9px);
+    box-shadow:0 25px 55px rgba(48,38,43,.10);
+}
+
+.service-card:hover::before{
+    transform:scaleX(1);
+}
+
+.service-image{
+    height:225px;
+    overflow:hidden;
+}
+
+.service-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.6s ease;
+}
+
+.service-card:hover .service-image img{
+    transform:scale(1.07);
+}
+
+.service-content{
+    padding:29px 28px 25px;
+}
+
+.service-number{
+    color:var(--terracotta);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:2.3px;
+}
+
+.service-content h3{
+    font-family:"Playfair Display",serif;
+    font-size:26px;
+    line-height:1.22;
+    margin:10px 0 13px;
+}
+
+.service-content > p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.75;
+    min-height:69px;
+}
+
+.service-list{
+    list-style:none;
+    margin:19px 0 21px;
+    padding-top:17px;
+    border-top:1px solid #eee4dc;
+}
+
+.service-list li{
+    position:relative;
+    padding-left:19px;
+    color:#53494d;
+    font-size:12px;
+    margin:8px 0;
+}
+
+.service-list li::before{
+    content:"";
+    position:absolute;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:var(--terracotta);
+    left:2px;
+    top:8px;
+}
+
+.price-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.price{
+    font-size:23px;
+    font-weight:700;
+}
+
+.service-tag{
+    padding:6px 10px;
+    background:#f3e7de;
+    color:var(--terracotta-dark);
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:1.3px;
+}
+
+
+/* =========================================================
+   WHAT YOU GET
+========================================================= */
+
+.soft-section{
+    background:var(--cream-dark);
+    padding:105px 0;
+}
+
+.benefits{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.benefit{
+    min-height:205px;
+    background:rgba(255,253,251,.75);
+    border:1px solid #e1d4c9;
+    padding:30px 25px;
+    transition:.35s ease;
+}
+
+.benefit:hover{
+    background:var(--white);
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(48,38,43,.07);
+}
+
+.benefit-number{
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+    color:#d3a58e;
+}
+
+.benefit h3{
+    font-family:"Playfair Display",serif;
+    font-size:22px;
+    margin:19px 0 9px;
+}
+
+.benefit p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   NEW — WHAT YOU CAN WORK ON
+========================================================= */
+
+.work-on{
+    padding:110px 0;
+}
+
+.work-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.work-item{
+    position:relative;
+    min-height:135px;
+    display:flex;
+    align-items:center;
+    gap:25px;
+    padding:27px 30px;
+    background:var(--white);
+    border:1px solid var(--border);
+    overflow:hidden;
+    transition:.35s ease;
+}
+
+.work-item::after{
+    content:"";
+    position:absolute;
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#f4e8df;
+    right:-35px;
+    bottom:-40px;
+}
+
+.work-item:hover{
+    transform:translateX(5px);
+    box-shadow:0 15px 35px rgba(48,38,43,.07);
+}
+
+.work-icon{
+    position:relative;
+    z-index:2;
+    width:54px;
+    height:54px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #d9c5b8;
+    color:var(--terracotta);
+    font-weight:700;
+}
+
+.work-item h3{
+    position:relative;
+    z-index:2;
+    font-family:"Playfair Display",serif;
+    font-size:23px;
+}
+
+.work-item p{
+    position:relative;
+    z-index:2;
+    color:var(--muted);
+    font-size:12px;
+    margin-top:3px;
+}
+
+
+/* =========================================================
+   WHO IS THIS FOR
+========================================================= */
+
+.audience{
+    padding:110px 0;
+}
+
+.audience-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:85px;
+    align-items:center;
+}
+
+.audience h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,4.5vw,57px);
+    line-height:1.08;
+    letter-spacing:-1px;
+    margin-bottom:23px;
+}
+
+.audience-text{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.85;
+}
+
+.audience-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:13px;
+}
+
+.audience-item{
+    background:var(--white);
+    border:1px solid var(--border);
+    padding:27px 25px;
+    transition:.3s ease;
+}
+
+.audience-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(48,38,43,.07);
+}
+
+.audience-item span{
+    color:var(--terracotta);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1.5px;
+}
+
+.audience-item h3{
+    font-family:"Playfair Display",serif;
+    font-size:22px;
+    margin:8px 0;
+}
+
+.audience-item p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   NEW — BEFORE AFTER
+========================================================= */
+
+.journey{
+    background:var(--cream-dark);
+    padding:110px 0;
+}
+
+.journey-grid{
+    display:grid;
+    grid-template-columns:1fr 70px 1fr;
+    gap:0;
+    align-items:stretch;
+}
+
+.journey-column{
+    padding:38px;
+}
+
+.journey-column.before{
+    background:#e8ddd4;
+}
+
+.journey-column.after{
+    background:var(--plum);
+    color:white;
+}
+
+.journey-title{
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.before .journey-title{
+    color:var(--terracotta-dark);
+}
+
+.after .journey-title{
+    color:#d99a7e;
+}
+
+.journey-column h3{
+    font-family:"Playfair Display",serif;
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.journey-list{
+    list-style:none;
+}
+
+.journey-list li{
+    padding:13px 0;
+    border-bottom:1px solid rgba(48,38,43,.10);
+    font-size:13px;
+}
+
+.after .journey-list li{
+    border-color:rgba(255,255,255,.12);
+    color:#d5c8cb;
+}
+
+.journey-arrow{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--terracotta);
+    color:white;
+    font-size:26px;
+    font-weight:300;
+}
+
+
+/* =========================================================
+   WHY
+========================================================= */
+
+.why{
+    background:var(--plum);
+    color:white;
+    padding:110px 0;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:85px;
+    align-items:center;
+}
+
+.why .eyebrow{
+    color:#d99a7e;
+}
+
+.why .eyebrow::before{
+    background:#d99a7e;
+}
+
+.why h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,4.5vw,57px);
+    line-height:1.08;
+    margin-bottom:24px;
+}
+
+.why-copy{
+    color:#d0c3c6;
+    font-size:14px;
+    line-height:1.9;
+}
+
+.points{
+    display:grid;
+    gap:10px;
+}
+
+.point{
+    padding:23px 24px;
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.025);
+    transition:.3s ease;
+}
+
+.point:hover{
+    background:rgba(255,255,255,.06);
+    border-color:rgba(217,154,126,.35);
+}
+
+.point strong{
+    display:block;
+    font-family:"Playfair Display",serif;
+    font-size:21px;
+    margin-bottom:5px;
+}
+
+.point span{
+    color:#bfb2b5;
+    font-size:12px;
+}
+
+
+/* =========================================================
+   PERSONAL NOTE
+========================================================= */
+
+.personal{
+    padding:110px 0;
+}
+
+.personal-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:80px;
+    align-items:center;
+}
+
+.personal-photo{
+    height:520px;
+    overflow:hidden;
+    position:relative;
+}
+
+.personal-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.personal-photo::after{
+    content:"";
+    position:absolute;
+    inset:18px;
+    border:1px solid rgba(255,255,255,.55);
+    pointer-events:none;
+}
+
+.personal-content .eyebrow{
+    margin-bottom:18px;
+}
+
+.personal-content h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,4.5vw,58px);
+    line-height:1.08;
+    margin-bottom:24px;
+}
+
+.personal-content p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.9;
+    margin-bottom:17px;
+}
+
+.signature{
+    margin-top:27px;
+    font-family:"Playfair Display",serif;
+    font-size:24px;
+    color:var(--terracotta);
+}
+
+
+/* =========================================================
+   QUICK STATS
+========================================================= */
+
+.stats{
+    background:#f1e8e0;
+    padding:65px 0;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border:1px solid #dfd0c5;
+}
+
+.stat{
+    text-align:center;
+    padding:25px 15px;
+    border-right:1px solid #dfd0c5;
+}
+
+.stat:last-child{
+    border-right:0;
+}
+
+.stat strong{
+    display:block;
+    font-family:"Playfair Display",serif;
+    font-size:31px;
+    color:var(--plum);
+}
+
+.stat span{
+    color:var(--muted);
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.process{
+    padding:110px 0;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.process-card{
+    position:relative;
+    background:var(--white);
+    border:1px solid var(--border);
+    padding:35px 30px;
+    overflow:hidden;
+}
+
+.process-card::after{
+    content:"";
+    position:absolute;
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    background:#f2e3d9;
+    right:-30px;
+    bottom:-30px;
+}
+
+.process-number{
+    font-family:"Playfair Display",serif;
+    color:var(--terracotta);
+    font-size:39px;
+}
+
+.process-card h3{
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+    margin:17px 0 9px;
+}
+
+.process-card p{
+    position:relative;
+    z-index:2;
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-section{
+    background:var(--cream-dark);
+    padding:105px 0;
+}
+
+.faq{
+    max-width:860px;
+    margin:auto;
+    border-top:1px solid #d9cbc0;
+}
+
+.faq-item{
+    border-bottom:1px solid #d9cbc0;
+}
+
+.faq-question{
+    width:100%;
+    border:0;
+    background:transparent;
+    padding:23px 4px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    text-align:left;
+    cursor:pointer;
+    color:var(--plum);
+    font-size:14px;
+    font-weight:600;
+}
+
+.faq-question span{
+    width:28px;
+    height:28px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #d7c8bc;
+    border-radius:50%;
+    color:var(--terracotta);
+    font-size:18px;
+    transition:.3s ease;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.faq-answer p{
+    padding:0 45px 23px 4px;
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.8;
+}
+
+.faq-item.open .faq-answer{
+    max-height:180px;
+}
+
+.faq-item.open .faq-question span{
+    transform:rotate(45deg);
+    background:var(--terracotta);
+    border-color:var(--terracotta);
+    color:white;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+    padding:105px 0;
+}
+
+.cta-box{
+    position:relative;
+    overflow:hidden;
+    background:var(--terracotta);
+    color:white;
+    padding:78px 30px;
+    text-align:center;
+}
+
+.cta-box::before,
+.cta-box::after{
+    content:"";
+    position:absolute;
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:50%;
+}
+
+.cta-box::before{
+    width:300px;
+    height:300px;
+    left:-170px;
+    top:-170px;
+}
+
+.cta-box::after{
+    width:260px;
+    height:260px;
+    right:-150px;
+    bottom:-160px;
+}
+
+.cta-box .eyebrow{
+    justify-content:center;
+    color:#f8ddd1;
+}
+
+.cta-box .eyebrow::before{
+    background:#f8ddd1;
+}
+
+.cta-box h2{
+    position:relative;
+    z-index:2;
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,4.5vw,54px);
+    line-height:1.1;
+    margin-bottom:18px;
+}
+
+.cta-box p{
+    position:relative;
+    z-index:2;
+    max-width:620px;
+    margin:0 auto 28px;
+    color:#fbe9e1;
+    font-size:14px;
+}
+
+.cta-button{
+    position:relative;
+    z-index:2;
+    display:inline-flex;
+    min-height:48px;
+    align-items:center;
+    padding:0 24px;
+    background:white;
+    color:var(--plum);
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.7px;
+    transition:.3s ease;
+}
+
+.cta-button:hover{
+    background:var(--plum);
+    color:white;
+}
+
+
+/* =====================================================
+   CHANDINI CONNECTS FOOTER
+   BLACK + WHITE VERSION
+===================================================== */
+
+.chandini-footer {
+  position: relative;
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #000;
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FOOTER IMAGE
+===================================================== */
+
+.footer-art {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  line-height: 0;
+
+  background: #f7f7f4;
+}
+
+.footer-art img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.footer-main {
+  width: 100%;
+
+  margin: 0;
+
+  padding:
+    60px
+    max(35px, calc((100% - 1180px) / 2));
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    1fr
+    1fr;
+
+  align-items: start;
+
+  gap: 70px;
+
+  background: #000;
+
+  border-top:
+    1px solid rgba(255,255,255,.15);
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.footer-brand h2 {
+  margin: 0;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: 55px;
+  font-weight: 400;
+
+  line-height: .9;
+
+  letter-spacing: -2px;
+
+  color: #fff;
+}
+
+.footer-brand > span {
+  display: block;
+
+  margin-top: 13px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 7px;
+
+  color: #fff;
+}
+
+.footer-brand p {
+  margin: 28px 0 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+
+  color: rgba(255,255,255,.65);
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.footer-links {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 40px;
+}
+
+.footer-link-group {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+.footer-link-group > span,
+.footer-connect > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,.45);
+}
+
+.footer-link-group a {
+  display: inline-block;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease;
+}
+
+.footer-link-group a:hover {
+  transform: translateX(4px);
+
+  opacity: .55;
+}
+
+
+/* =====================================================
+   CONNECT
+===================================================== */
+
+.footer-connect h3 {
+  margin: 0 0 27px;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: clamp(31px, 3vw, 45px);
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+  color: #fff;
+}
+
+.footer-connect h3 em {
+  color: #fff;
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.footer-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.footer-socials a {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(255,255,255,.35);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    color .3s ease;
+}
+
+.footer-socials a i {
+  color: inherit;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-4px);
+
+  background: #fff;
+
+  color: #000;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+  width: 100%;
+
+  min-height: 68px;
+
+  padding:
+    0
+    max(35px, calc((100% - 1180px) / 2));
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  background: #000;
+
+  border-top:
+    1px solid rgba(255,255,255,.15);
+
+  box-sizing: border-box;
+}
+
+.footer-bottom span,
+.footer-bottom a {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  color: rgba(255,255,255,.65);
+
+  text-decoration: none;
+}
+
+.footer-bottom a {
+  transition: color .25s ease;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
+
+.footer-brand,
+.footer-links,
+.footer-connect {
+  opacity: 0;
+
+  transform: translateY(22px);
+
+  transition:
+    opacity .8s cubic-bezier(.22,1,.36,1),
+    transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.chandini-footer.footer-visible .footer-brand {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .05s;
+}
+
+.chandini-footer.footer-visible .footer-links {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .17s;
+}
+
+.chandini-footer.footer-visible .footer-connect {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .29s;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .footer-main {
+    padding: 50px 35px;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 45px;
+  }
+
+  .footer-connect {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    padding: 0 35px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .chandini-footer {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    background: #000;
+  }
+
+
+  /* IMAGE */
+
+  .footer-art {
+    width: 100%;
+
+    height: 220px;
+  }
+
+  .footer-art img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
+
+  /* MAIN */
+
+  .footer-main {
+    padding:
+      43px 20px
+      45px;
+
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+
+    background: #000;
+  }
+
+
+  /* BRAND */
+
+  .footer-brand h2 {
+    font-size: 45px;
+  }
+
+  .footer-brand > span {
+    margin-top: 11px;
+
+    font-size: 7px;
+
+    letter-spacing: 6px;
+  }
+
+  .footer-brand p {
+    margin-top: 21px;
+
+    font-size: 10px;
+  }
+
+
+  /* LINKS */
+
+  .footer-links {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 25px;
+  }
+
+  .footer-link-group a {
+    font-size: 13px;
+  }
+
+
+  /* CONNECT */
+
+  .footer-connect h3 {
+    max-width: 280px;
+
+    font-size: 35px;
+  }
+
+
+  /* SOCIALS */
+
+  .footer-socials a {
+    width: 37px;
+    height: 37px;
+
+    font-size: 13px;
+  }
+
+
+  /* BOTTOM */
+
+  .footer-bottom {
+    min-height: auto;
+
+    padding:
+      24px 20px
+      100px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    background: #000;
+  }
+
+  .footer-bottom span,
+  .footer-bottom a {
+    font-size: 6.5px;
+
+    letter-spacing: 1.6px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .footer-art {
+    height: 195px;
+  }
+
+  .footer-main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-brand h2 {
+    font-size: 41px;
+  }
+
+  .footer-connect h3 {
+    font-size: 32px;
+  }
+
+  .footer-bottom {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    padding-bottom: 95px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px){
+
+    .nav-links{
+        gap:18px;
+    }
+
+    .socials{
+        display:none;
+    }
+
+    .hero-grid{
+        gap:45px;
+    }
+
+    .highlight-grid,
+    .benefits{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .audience-grid,
+    .why-grid,
+    .personal-grid{
+        gap:50px;
+    }
+}
+
+
+@media(max-width:800px){
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        display:none;
+        left:0;
+        top:82px;
+        width:100%;
+        padding:20px 4%;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:4px;
+        background:rgba(248,244,239,.98);
+        border-bottom:1px solid var(--border);
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .nav-links > a{
+        width:100%;
+        padding:12px 0;
+    }
+
+    .hero{
+        padding:65px 0 85px;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:53px;
+    }
+
+    .hero-visual{
+        min-height:500px;
+    }
+
+    .hero-photo-wrap,
+    .hero-outline{
+        width:78%;
+        height:480px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .work-grid{
+        grid-template-columns:1fr;
+    }
+
+    .audience-grid,
+    .why-grid,
+    .personal-grid{
+        grid-template-columns:1fr;
+    }
+
+    .journey-grid{
+        grid-template-columns:1fr;
+    }
+
+    .journey-arrow{
+        min-height:55px;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat:nth-child(2){
+        border-right:0;
+    }
+
+    .stat{
+        border-bottom:1px solid #dfd0c5;
+    }
+
+    .footer-top{
+        flex-direction:column;
+    }
+}
+
+
+@media(max-width:560px){
+
+    .container{
+        width:min(92%,400px);
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .hero{
+        padding-top:50px;
+    }
+
+    .hero h1{
+        font-size:46px;
+    }
+
+    .hero-text{
+        font-size:14px;
+    }
+
+    .hero-buttons{
+        width:100%;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+        width:100%;
+    }
+
+    .hero-visual{
+        min-height:440px;
+    }
+
+    .hero-photo-wrap,
+    .hero-outline{
+        width:87%;
+        height:425px;
+    }
+
+    .hero-outline{
+        right:10px;
+    }
+
+    .hero-card{
+        left:0;
+        bottom:18px;
+        width:205px;
+        padding:18px;
+    }
+
+    .hero-card strong{
+        font-size:19px;
+    }
+
+    .highlight-grid,
+    .benefits{
+        grid-template-columns:1fr;
+    }
+
+    .highlight{
+        padding:17px;
+    }
+
+    .section-heading h2,
+    .intro h2{
+        font-size:36px;
+    }
+
+    .audience h2,
+    .why h2,
+    .personal-content h2{
+        font-size:39px;
+    }
+
+    .personal-photo{
+        height:420px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat strong{
+        font-size:25px;
+    }
+
+    .cta-box{
+        padding:60px 22px;
+    }
+
+    .cta-box h2{
+        font-size:36px;
+    }
+
+    .footer-links{
+        gap:15px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="container nav-inner">
+
+        <a href="index.html" class="logo">
+            Chandini <span>CONNECTS</span>
+        </a>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="manifest.html">
+                Manifest With Chandini
+            </a>
+
+            <a href="#career.html" class="active">
+                Career Connect
+            </a>
+
+            <a href="habits.html">
+                Habit Trackers
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <div class="socials">
+
+                <a href="https://www.instagram.com/chandini_connects/" class="social" class="social-btn">
+                    Instagram
+                </a>
+
+                <a href="https://www.youtube.com/@chandiniconnects/featured" class="social" class="social-btn">
+                    YouTube
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                CAREER CONNECT
+            </div>
+
+            <h1>
+                Your Career.<br>
+                <span>Your Next Move.</span>
+            </h1>
+
+            <p class="hero-text">
+                Personalized career support to help you present
+                yourself professionally, prepare with confidence
+                and gain clarity about your next career step.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#services" class="primary-btn">
+                    EXPLORE SERVICES
+                </a>
+
+                <a href="#about" class="secondary-btn">
+                    KNOW MORE
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="hero-photo-wrap">
+
+                <img
+                    class="hero-photo"
+                    src="chandinii.webp"
+                    alt="Chandini"
+                    onerror="this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85'"
+                >
+
+            </div>
+
+            <div class="hero-outline"></div>
+
+            <div class="hero-card">
+
+                <small>
+                    Career With Clarity
+                </small>
+
+                <strong>
+                    Guidance.<br>
+                    Preparation.<br>
+                    Direction.
+                </strong>
+
+                <div class="hero-card-line"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro" id="about">
+
+    <div class="container">
+
+        <div class="eyebrow center-eyebrow">
+            CAREER SERVICES
+        </div>
+
+        <h2>
+            Support That Fits<br>
+            Your Career Goal.
+        </h2>
+
+        <p>
+            Career-focused services created for people who want
+            better direction, a stronger professional profile
+            and more confidence while moving forward.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CAREER SUPPORT HIGHLIGHTS
+===================================================== -->
+
+<section class="highlights">
+
+    <div class="container">
+
+        <div class="highlight-grid">
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    01
+                </div>
+
+                <div>
+                    <strong>Career Clarity</strong>
+                    <span>Understand your direction</span>
+                </div>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    02
+                </div>
+
+                <div>
+                    <strong>Profile Support</strong>
+                    <span>Present yourself professionally</span>
+                </div>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    03
+                </div>
+
+                <div>
+                    <strong>Interview Support</strong>
+                    <span>Prepare with confidence</span>
+                </div>
+
+            </div>
+
+
+            <div class="highlight">
+
+                <div class="highlight-icon">
+                    04
+                </div>
+
+                <div>
+                    <strong>Job Search Direction</strong>
+                    <span>Move towards your next step</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow center-eyebrow">
+                AVAILABLE SERVICES
+            </div>
+
+            <h2>
+                Choose What You Need.
+            </h2>
+
+            <p>
+                Focused career support designed around specific
+                professional needs.
+            </p>
+
+        </div>
+
+
+        <div class="service-grid">
+
+
+            <!-- SERVICE 01 -->
+
+            <article class="service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85"
+                        alt="Data Engineering Mock Interviews"
+                    >
+
+                </div>
+
+                <div class="service-content">
+
+                    <div class="service-number">
+                        01 — INTERVIEW
+                    </div>
+
+                    <h3>
+                        Data Engineering Mock Interviews
+                    </h3>
+
+                    <p>
+                        Interview-focused support designed to help
+                        candidates practice and understand where
+                        they can improve.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>Mock interview practice</li>
+                        <li>Interview-focused guidance</li>
+                        <li>Feedback for improvement</li>
+
+                    </ul>
+
+                    <div class="price-row">
+
+                        <div class="price">
+                            ₹499
+                        </div>
+
+                        <div class="service-tag">
+                            CAREER SERVICE
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 02 -->
+
+            <article class="service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1000&q=85"
+                        alt="Resume Optimization"
+                    >
+
+                </div>
+
+                <div class="service-content">
+
+                    <div class="service-number">
+                        02 — PROFILE
+                    </div>
+
+                    <h3>
+                        Resume Optimization
+                    </h3>
+
+                    <p>
+                        Improve the way your professional profile
+                        presents your skills, experience and
+                        career direction.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>Resume optimization</li>
+                        
+
+                    </ul>
+
+                    <div class="price-row">
+
+                        <div class="price">
+                            ₹1,999
+                        </div>
+
+                        <div class="service-tag">
+                            CAREER SERVICE
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- SERVICE 03 -->
+
+            <article class="service-card">
+
+                <div class="service-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=85"
+                        alt="One to One Career Guidance"
+                    >
+
+                </div>
+
+                <div class="service-content">
+
+                    <div class="service-number">
+                        03 — GUIDANCE
+                    </div>
+
+                    <h3>
+                        1:1 Career Guidance
+                    </h3>
+
+                    <p>
+                        A personal career conversation focused on
+                        understanding your current situation and
+                        identifying practical next steps.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>Personal career discussion</li>
+                        <li>Career direction guidance</li>
+                        <li>Practical next-step suggestions</li>
+
+                    </ul>
+
+                    <div class="price-row">
+
+                        <div class="price">
+                            ₹499
+                        </div>
+
+                        <div class="service-tag">
+                            CAREER SERVICE
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHAT YOU GET
+===================================================== -->
+
+<section class="soft-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow center-eyebrow">
+                THE EXPERIENCE
+            </div>
+
+            <h2>
+                What You Get
+            </h2>
+
+            <p>
+                Simple, practical and personalized career support.
+            </p>
+
+        </div>
+
+
+        <div class="benefits">
+
+            <div class="benefit">
+                <div class="benefit-number">01</div>
+                <h3>Personal Attention</h3>
+                <p>
+                    Guidance that considers your individual
+                    career situation and goals.
+                </p>
+            </div>
+
+
+            <div class="benefit">
+                <div class="benefit-number">02</div>
+                <h3>Practical Direction</h3>
+                <p>
+                    Clear suggestions that help you understand
+                    your possible next steps.
+                </p>
+            </div>
+
+
+            <div class="benefit">
+                <div class="benefit-number">03</div>
+                <h3>Professional Profile</h3>
+                <p>
+                    Support in presenting yourself better across
+                    important professional platforms.
+                </p>
+            </div>
+
+
+            <div class="benefit">
+                <div class="benefit-number">04</div>
+                <h3>Interview Confidence</h3>
+                <p>
+                    Practice and feedback to help you approach
+                    interviews with greater confidence.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHAT YOU CAN WORK ON
+===================================================== -->
+
+<section class="work-on">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow center-eyebrow">
+                CAREER FOCUS AREAS
+            </div>
+
+            <h2>
+                What You Can Work On
+            </h2>
+
+            <p>
+                Different areas where focused career support
+                can make your next step clearer.
+            </p>
+
+        </div>
+
+
+        <div class="work-grid">
+
+
+            <div class="work-item">
+
+                <div class="work-icon">
+                    CV
+                </div>
+
+                <div>
+                    <h3>Resume</h3>
+                    <p>
+                        Improve your professional presentation.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="work-item">
+
+                <div class="work-icon">
+                    IQ
+                </div>
+
+                <div>
+                    <h3>Interviews</h3>
+                    <p>
+                        Practice and prepare with more confidence.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="work-item">
+
+                <div class="work-icon">
+                    →
+                </div>
+
+                <div>
+                    <h3>Career Direction</h3>
+                    <p>
+                        Get clarity around your next career move.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="work-item">
+
+                <div class="work-icon">
+                    JS
+                </div>
+
+                <div>
+                    <h3>Job Search</h3>
+                    <p>
+                        Understand your next practical step.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHO IS THIS FOR
+===================================================== -->
+
+<section class="audience">
+
+    <div class="container audience-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                WHO IS THIS FOR?
+            </div>
+
+            <h2>
+                For Every Career Stage That Needs Direction.
+            </h2>
+
+            <p class="audience-text">
+                Whether you are starting your career, actively
+                looking for opportunities or trying to present
+                your experience better, these services are
+                designed to support your next move.
+            </p>
+
+        </div>
+
+
+        <div class="audience-list">
+
+            <div class="audience-item">
+                <span>01</span>
+                <h3>Fresh Graduates</h3>
+                <p>
+                    For graduates looking for clarity while
+                    entering the professional world.
+                </p>
+            </div>
+
+
+            <div class="audience-item">
+                <span>02</span>
+                <h3>Job Seekers</h3>
+                <p>
+                    For candidates actively working towards
+                    their next opportunity.
+                </p>
+            </div>
+
+
+            <div class="audience-item">
+                <span>03</span>
+                <h3>Interview Candidates</h3>
+                <p>
+                    For candidates who want to improve their
+                    interview preparation and confidence.
+                </p>
+            </div>
+
+
+            <div class="audience-item">
+                <span>04</span>
+                <h3>Career Changers</h3>
+                <p>
+                    For people considering their next
+                    professional direction.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BEFORE / AFTER JOURNEY
+===================================================== -->
+
+<section class="journey">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow center-eyebrow">
+                YOUR CAREER JOURNEY
+            </div>
+
+            <h2>
+                From Uncertainty To Direction.
+            </h2>
+
+            <p>
+                The goal is not to make things complicated —
+                it is to make your next step clearer.
+            </p>
+
+        </div>
+
+
+        <div class="journey-grid">
+
+
+            <div class="journey-column before">
+
+                <div class="journey-title">
+                    BEFORE
+                </div>
+
+                <h3>
+                    Where You May Be Now
+                </h3>
+
+                <ul class="journey-list">
+
+                    <li>
+                        Not sure which direction to take
+                    </li>
+
+                    <li>
+                        Resume does not feel strong enough
+                    </li>
+
+                    <li>
+                        Unsure how your profile looks to recruiters
+                    </li>
+
+                    <li>
+                        Feeling nervous about interviews
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="journey-arrow">
+                →
+            </div>
+
+
+            <div class="journey-column after">
+
+                <div class="journey-title">
+                    AFTER
+                </div>
+
+                <h3>
+                    What You Can Work Towards
+                </h3>
+
+                <ul class="journey-list">
+
+                    <li>
+                        Better understanding of your next step
+                    </li>
+
+                    <li>
+                        A stronger professional presentation
+                    </li>
+
+                    <li>
+                        More clarity across job platforms
+                    </li>
+
+                    <li>
+                        Better interview preparation
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY CAREER CONNECT
+===================================================== -->
+
+<section class="why">
+
+    <div class="container why-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                WHY CAREER CONNECT?
+            </div>
+
+            <h2>
+                You Don't Have To Figure Everything Out Alone.
+            </h2>
+
+            <p class="why-copy">
+                Career decisions can feel confusing when you
+                are trying to manage everything by yourself.
+                Career Connect brings together practical guidance,
+                profile support and interview-focused preparation
+                in one place.
+            </p>
+
+        </div>
+
+
+        <div class="points">
+
+            <div class="point">
+
+                <strong>
+                    Personalized Guidance
+                </strong>
+
+                <span>
+                    Support based on your current career situation.
+                </span>
+
+            </div>
+
+
+            <div class="point">
+
+                <strong>
+                    Professional Presentation
+                </strong>
+
+                <span>
+                    Improve how your professional profile represents you.
+                </span>
+
+            </div>
+
+
+            <div class="point">
+
+                <strong>
+                    Practical Career Support
+                </strong>
+
+                <span>
+                    Focus on useful and actionable career direction.
+                </span>
+
+            </div>
+
+
+            <div class="point">
+
+                <strong>
+                    Confidence To Move Forward
+                </strong>
+
+                <span>
+                    Approach your next career step with better clarity.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PERSONAL NOTE
+===================================================== -->
+
+<section class="personal">
+
+    <div class="container personal-grid">
+
+
+        <div class="personal-photo">
+
+            <img
+                src="chandinii.webp"
+                alt="Chandini"
+                onerror="this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85'"
+            >
+
+        </div>
+
+
+        <div class="personal-content">
+
+            <div class="eyebrow">
+                A NOTE FROM CHANDINI
+            </div>
+
+            <h2>
+                Your Next Step Deserves Clarity.
+            </h2>
+
+            <p>
+                Career decisions can feel overwhelming when there
+                are too many things to figure out at once.
+            </p>
+
+            <p>
+                Career Connect is designed to offer focused,
+                practical support around the areas that matter
+                most to your professional journey.
+            </p>
+
+            <p>
+                The aim is simple — help you understand where
+                you are, what you can improve and what your
+                next step could look like.
+            </p>
+
+            <div class="signature">
+                — Chandini
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUICK STATS
+===================================================== -->
+
+<section class="stats">
+
+    <div class="container">
+
+        <div class="stats-grid">
+
+            <div class="stat">
+
+                <strong>1:1</strong>
+
+                <span>
+                    Career Guidance
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>3</strong>
+
+                <span>
+                    Career Services
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>360°</strong>
+
+                <span>
+                    Profile Support
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <strong>100%</strong>
+
+                <span>
+                    Focused Support
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="process">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow center-eyebrow">
+                A SIMPLE APPROACH
+            </div>
+
+            <h2>
+                How Career Connect Helps
+            </h2>
+
+            <p>
+                No complicated process. Just focused career
+                support around what you need.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>
+                    Understand
+                </h3>
+
+                <p>
+                    Understand your current career situation,
+                    goals and challenges.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>
+                    Improve
+                </h3>
+
+                <p>
+                    Work on the areas that can strengthen your
+                    professional presentation and preparation.
+                </p>
+
+            </div>
+
+
+            <div class="process-card">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>
+                    Move Forward
+                </h3>
+
+                <p>
+                    Take your next career step with better
+                    clarity and confidence.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="faq-section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow center-eyebrow">
+                FAQ
+            </div>
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+        </div>
+
+
+        <div class="faq">
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    What services are available?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Career Connect currently showcases Data
+                        Engineering Mock Interviews, Resume Optimization,
+                        and 1:1 Career Guidance.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    What is 1:1 Career Guidance?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        It is a personal career discussion focused
+                        on understanding your situation, career
+                        direction and practical next steps.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    What does profile optimization include?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        It focuses on improving your Resume so that your
+                        professional presentation is stronger
+                        and clearer.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Who can use these services?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Fresh graduates, job seekers, interview
+                        candidates and people considering a career
+                        change can explore the available services.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    Are these courses or training programs?
+
+                    <span>+</span>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        No. Career Connect focuses on personalized
+                        career guidance, profile support and
+                        interview-focused services.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div class="eyebrow">
+                CAREER CONNECT
+            </div>
+
+            <h2>
+                Let Your Next Career Step<br>
+                Be More Clear.
+            </h2>
+
+            <p>
+                Explore the available career services and find
+                the support that matches your current
+                professional goal.
+            </p>
+
+            <a href="#services" class="cta-button">
+                EXPLORE SERVICES
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CHANDINI CONNECTS FOOTER
+========================================= -->
+
+<footer class="chandini-footer">
+
+  <!-- FOOTER ART -->
+  <div class="footer-art">
+    <img src="footer.webp" alt="Chandini Connects">
+  </div>
+
+
+  <!-- MAIN FOOTER -->
+  <div class="footer-main">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+
+      <h2>Chandini</h2>
+      <span>CONNECTS</span>
+
+      <p>
+        Learn with clarity.<br>
+        Grow with confidence.<br>
+        Create with purpose.
+      </p>
+
+    </div>
+
+
+    <!-- LINKS -->
+    <div class="footer-links">
+
+      <div class="footer-link-group">
+
+        <span>EXPLORE</span>
+
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#courses">Courses</a>
+        <a href="#workshops">Workshops</a>
+
+      </div>
+
+
+      <div class="footer-link-group">
+
+        <span>CONNECT</span>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="https://www.instagram.com/chandini_connects/"
+           target="_blank">
+          Instagram
+        </a>
+
+        <a href="https://www.youtube.com/@chandiniconnects/featured" class="social" target="_blank">
+          YouTube
+        </a>
+
+        <a href="#" target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONNECT -->
+    <div class="footer-connect">
+
+      <span>LET'S CONNECT</span>
+
+      <h3>
+        Let’s learn,<br>
+        grow & <em>create.</em>
+      </h3>
+
+      <div class="footer-socials">
+
+        <a href="https://www.instagram.com/chandini_connects/"
+           target="_blank"
+           aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#"
+           target="_blank"
+           aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="#"
+           target="_blank"
+           aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="mailto:chandiniconnects@gmail.com"
+           aria-label="Email">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 CHANDINI CONNECTS
+    </span>
+
+    <span>
+      LEARN • GROW • CREATE • TOGETHER
+    </span>
+
+    <a href="#top">
+      BACK TO TOP ↑
+    </a>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* MOBILE MENU */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+
+    navLinks.classList.toggle("show");
+
+});
+
+
+/* CLOSE MOBILE MENU */
+
+document.querySelectorAll(".nav-links > a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("show");
+
+    });
+
+});
+
+
+/* FAQ */
+
+const faqQuestions =
+document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach(question => {
+
+    question.addEventListener("click", () => {
+
+        const currentItem =
+        question.parentElement;
+
+        document.querySelectorAll(".faq-item").forEach(item => {
+
+            if(item !== currentItem){
+
+                item.classList.remove("open");
+
+            }
+
+        });
+
+        currentItem.classList.toggle("open");
+
+    });
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const footer =
+    document.querySelector(".chandini-footer");
+
+  if (!footer) return;
+
+
+  const footerObserver =
+    new IntersectionObserver(
+      function (entries) {
+
+        entries.forEach(function (entry) {
+
+          if (entry.isIntersecting) {
+
+            footer.classList.add(
+              "footer-visible"
+            );
+
+            footerObserver.unobserve(
+              footer
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.08
+      }
+    );
+
+
+  footerObserver.observe(footer);
+
+});
+
+</script>
+
+</body>
+</html>

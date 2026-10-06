@@ -1,0 +1,2944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Manifest With Chandini | Chandini CONNECTS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#fbf8f5;
+    color:#302824;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+.section-label{
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:3px;
+    color:#a86f55;
+    margin-bottom:15px;
+    text-transform:uppercase;
+}
+
+.section-title{
+    font-family:"Playfair Display",serif;
+    font-size:48px;
+    line-height:1.15;
+    font-weight:500;
+}
+
+.section-subtitle{
+    color:#776b65;
+    font-size:14px;
+    line-height:1.9;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    background:rgba(251,248,245,.95);
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid rgba(48,40,36,.08);
+}
+
+.nav-inner{
+    width:min(1180px,92%);
+    height:78px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    flex-direction:column;
+    line-height:1;
+}
+
+.logo-main{
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+    font-weight:600;
+}
+
+.logo-sub{
+    font-size:8px;
+    letter-spacing:4px;
+    color:#a86f55;
+    margin-top:5px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:29px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:12px;
+    color:#554943;
+    position:relative;
+    padding:7px 0;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:0;
+    height:1px;
+    background:#a86f55;
+    transition:.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
+}
+
+.nav-menu{
+    display:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:88vh;
+    padding:155px 0 110px;
+
+    display:flex;
+    align-items:center;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(209,161,138,.16),
+            transparent 30%
+        ),
+        #fbf8f5;
+}
+
+.hero-copy{
+    max-width:850px;
+}
+
+.hero-label{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    color:#a86f55;
+
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+}
+
+.hero-label::before{
+    content:"";
+    width:35px;
+    height:1px;
+    background:#a86f55;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(52px,7vw,88px);
+
+    font-weight:500;
+
+    line-height:1.02;
+
+    margin-bottom:30px;
+
+    max-width:900px;
+}
+
+.hero h1 span{
+    color:#a86f55;
+    font-style:italic;
+}
+
+.hero-text{
+    max-width:650px;
+
+    color:#70645e;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:14px 23px;
+
+    border-radius:4px;
+
+    font-size:11px;
+    font-weight:700;
+
+    letter-spacing:1.2px;
+
+    transition:.3s;
+}
+
+.btn-dark{
+    background:#302824;
+    color:#fff;
+}
+
+.btn-dark:hover{
+    transform:translateY(-3px);
+    background:#493b34;
+}
+
+.btn-light{
+    border:1px solid #cbbdb4;
+    color:#493d37;
+}
+
+.btn-light:hover{
+    border-color:#302824;
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   SHIFT
+========================= */
+
+.shift{
+    padding:120px 0;
+
+    background:#302824;
+    color:#fff;
+}
+
+.shift-grid{
+    display:grid;
+
+    grid-template-columns:.8fr 1.2fr;
+
+    gap:100px;
+
+    align-items:center;
+}
+
+.shift .section-label{
+    color:#d1a18a;
+}
+
+.shift h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:48px;
+
+    font-weight:500;
+
+    line-height:1.15;
+}
+
+.shift-content{
+    border-left:1px solid #65564e;
+
+    padding-left:50px;
+}
+
+.shift-content p{
+    color:#cfc3bd;
+
+    font-size:15px;
+
+    line-height:1.95;
+
+    margin-bottom:24px;
+}
+
+.shift-content strong{
+    color:#fff;
+}
+
+
+/* =========================
+   LIFE MAP
+========================= */
+
+.life-map{
+    padding:120px 0;
+}
+
+.section-head{
+    max-width:700px;
+    margin-bottom:60px;
+}
+
+.map-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:16px;
+}
+
+.map-card{
+    min-height:300px;
+
+    padding:30px 25px;
+
+    border:1px solid #ded3cc;
+
+    background:#fff;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.map-card:hover{
+    transform:translateY(-7px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(48,40,36,.08);
+}
+
+.map-number{
+    font-size:11px;
+
+    color:#a86f55;
+
+    letter-spacing:2px;
+}
+
+.map-icon{
+    font-size:27px;
+
+    margin:50px 0 22px;
+}
+
+.map-card h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:25px;
+
+    font-weight:500;
+
+    margin-bottom:12px;
+}
+
+.map-card p{
+    color:#776b65;
+
+    font-size:12px;
+
+    line-height:1.8;
+}
+
+
+/* =========================
+   FUTURE SELF
+========================= */
+
+.future{
+    padding:120px 0;
+
+    background:#efe6df;
+}
+
+.future-grid{
+    display:grid;
+
+    grid-template-columns:.8fr 1.2fr;
+
+    gap:90px;
+}
+
+.future-intro h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:48px;
+
+    line-height:1.1;
+
+    font-weight:500;
+}
+
+.future-intro p{
+    color:#776b65;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    margin-top:22px;
+}
+
+.prompts{
+    display:grid;
+
+    gap:14px;
+}
+
+.prompt{
+    background:#fff;
+
+    border:1px solid #ded3cc;
+
+    padding:24px 27px;
+
+    display:flex;
+
+    gap:20px;
+
+    align-items:flex-start;
+}
+
+.prompt-number{
+    color:#a86f55;
+
+    font-size:11px;
+
+    font-weight:700;
+}
+
+.prompt p{
+    font-family:"Playfair Display",serif;
+
+    font-size:20px;
+
+    line-height:1.4;
+}
+
+
+/* =========================
+   YOUR VISION → NEXT STEP
+========================= */
+
+.next-step{
+    padding:120px 0;
+
+    background:#fff;
+}
+
+.next-step-head{
+    max-width:720px;
+
+    margin-bottom:55px;
+}
+
+.next-step-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+}
+
+.next-card{
+    padding:38px 30px;
+
+    min-height:280px;
+
+    background:#fbf8f5;
+
+    border:1px solid #ddd1c9;
+
+    position:relative;
+
+    transition:.35s;
+}
+
+.next-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(48,40,36,.07);
+}
+
+.next-number{
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    color:#a86f55;
+}
+
+.next-card h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:29px;
+
+    font-weight:500;
+
+    margin:45px 0 15px;
+}
+
+.next-card p{
+    color:#776b65;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+.next-arrow{
+    position:absolute;
+
+    right:25px;
+    bottom:25px;
+
+    font-size:18px;
+
+    color:#a86f55;
+}
+
+.next-bottom{
+    margin-top:22px;
+
+    padding:28px 30px;
+
+    background:#302824;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:25px;
+}
+
+.next-bottom p{
+    color:#cfc3bd;
+
+    font-size:13px;
+
+    line-height:1.7;
+
+    max-width:650px;
+}
+
+.next-bottom strong{
+    color:#fff;
+}
+
+
+/* =========================
+   VIDEOS
+========================= */
+
+.videos{
+    padding:120px 0;
+
+    background:#fbf8f5;
+}
+
+.videos-heading{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    gap:40px;
+
+    margin-bottom:55px;
+}
+
+.videos-heading-left{
+    max-width:650px;
+}
+
+.videos-heading-right{
+    max-width:350px;
+}
+
+.video-grid{
+    display:grid;
+
+    grid-template-columns:1.35fr .85fr;
+
+    gap:22px;
+}
+
+.featured-video{
+    background:#302824;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    color:#fff;
+
+    border:1px solid #302824;
+}
+
+.video-frame{
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    background:#211c19;
+
+    overflow:hidden;
+}
+
+.video-frame iframe{
+    width:100%;
+    height:100%;
+
+    border:0;
+
+    display:block;
+}
+
+.featured-info{
+    padding:28px 30px 32px;
+}
+
+.video-tag{
+    color:#d1a18a;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+}
+
+.featured-info h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:29px;
+
+    line-height:1.2;
+
+    margin-bottom:9px;
+}
+
+.featured-info p{
+    color:#c8beb9;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+.small-video-column{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+}
+
+.small-video{
+    background:#fff;
+
+    border:1px solid #e1d7d0;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:190px 1fr;
+
+    min-height:150px;
+
+    transition:.3s;
+}
+
+.small-video:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(50,38,30,.08);
+}
+
+.small-video-frame{
+    min-height:150px;
+
+    background:#211c19;
+
+    overflow:hidden;
+}
+
+.small-video-frame iframe{
+    width:100%;
+    height:100%;
+
+    min-height:150px;
+
+    border:0;
+
+    display:block;
+}
+
+.small-video-info{
+    padding:22px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.small-video-info .video-tag{
+    color:#a86f55;
+
+    margin-bottom:7px;
+}
+
+.small-video-info h4{
+    font-family:"Playfair Display",serif;
+
+    font-size:21px;
+
+    line-height:1.25;
+
+    margin-bottom:7px;
+}
+
+.small-video-info p{
+    color:#776b65;
+
+    font-size:12px;
+
+    line-height:1.65;
+}
+
+
+/* =========================
+   CAREER × LIFE
+========================= */
+
+.career-life{
+    padding:120px 0;
+
+    background:#302824;
+
+    color:#fff;
+}
+
+.career-life-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.career-life .section-label{
+    color:#d1a18a;
+}
+
+.career-life h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:50px;
+
+    line-height:1.1;
+
+    font-weight:500;
+}
+
+.career-life p{
+    color:#c9bdb7;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    margin:25px 0 30px;
+
+    max-width:520px;
+}
+
+.connection-card{
+    border:1px solid #62534b;
+
+    padding:35px;
+}
+
+.connection-card span{
+    color:#d1a18a;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+}
+
+.connection-card h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+
+    font-weight:500;
+
+    margin:15px 0;
+}
+
+.connection-card p{
+    margin:0 0 25px;
+}
+
+
+/* =========================
+   METHOD
+========================= */
+
+.method{
+    padding:120px 0;
+}
+
+.method-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    border-top:1px solid #d9cdc5;
+
+    border-bottom:1px solid #d9cdc5;
+}
+
+.method-item{
+    padding:45px 28px;
+
+    border-right:1px solid #d9cdc5;
+}
+
+.method-item:last-child{
+    border-right:none;
+}
+
+.method-item span{
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    color:#a86f55;
+}
+
+.method-item h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:28px;
+
+    font-weight:500;
+
+    margin:20px 0 10px;
+}
+
+.method-item p{
+    color:#776b65;
+
+    font-size:12px;
+
+    line-height:1.8;
+}
+
+
+/* =========================
+   INTENTION
+========================= */
+
+.intention{
+    padding:100px 0 120px;
+
+    background:#efe6df;
+}
+
+.intention-box{
+    text-align:center;
+
+    max-width:800px;
+
+    margin:auto;
+}
+
+.intention-box h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:44px;
+
+    font-weight:500;
+
+    margin-bottom:25px;
+}
+
+.intention-text{
+    min-height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:24px;
+
+    font-style:italic;
+
+    color:#76584b;
+
+    margin-bottom:30px;
+
+    transition:opacity .2s ease;
+}
+
+.intention-btn{
+    border:1px solid #a86f55;
+
+    background:transparent;
+
+    padding:13px 23px;
+
+    color:#76584b;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.intention-btn:hover{
+    background:#302824;
+
+    border-color:#302824;
+
+    color:#fff;
+}
+
+
+/* =====================================================
+   CHANDINI CONNECTS FOOTER
+   BLACK + WHITE VERSION
+===================================================== */
+
+.chandini-footer {
+  position: relative;
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #000;
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FOOTER IMAGE
+===================================================== */
+
+.footer-art {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  line-height: 0;
+
+  background: #f7f7f4;
+}
+
+.footer-art img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.footer-main {
+  width: 100%;
+
+  margin: 0;
+
+  padding:
+    60px
+    max(35px, calc((100% - 1180px) / 2));
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    1fr
+    1fr;
+
+  align-items: start;
+
+  gap: 70px;
+
+  background: #000;
+
+  border-top:
+    1px solid rgba(255,255,255,.15);
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.footer-brand h2 {
+  margin: 0;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: 55px;
+  font-weight: 400;
+
+  line-height: .9;
+
+  letter-spacing: -2px;
+
+  color: #fff;
+}
+
+.footer-brand > span {
+  display: block;
+
+  margin-top: 13px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 7px;
+
+  color: #fff;
+}
+
+.footer-brand p {
+  margin: 28px 0 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+
+  color: rgba(255,255,255,.65);
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.footer-links {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 40px;
+}
+
+.footer-link-group {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+.footer-link-group > span,
+.footer-connect > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,.45);
+}
+
+.footer-link-group a {
+  display: inline-block;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease;
+}
+
+.footer-link-group a:hover {
+  transform: translateX(4px);
+
+  opacity: .55;
+}
+
+
+/* =====================================================
+   CONNECT
+===================================================== */
+
+.footer-connect h3 {
+  margin: 0 0 27px;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: clamp(31px, 3vw, 45px);
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+  color: #fff;
+}
+
+.footer-connect h3 em {
+  color: #fff;
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.footer-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.footer-socials a {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(255,255,255,.35);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    color .3s ease;
+}
+
+.footer-socials a i {
+  color: inherit;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-4px);
+
+  background: #fff;
+
+  color: #000;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+  width: 100%;
+
+  min-height: 68px;
+
+  padding:
+    0
+    max(35px, calc((100% - 1180px) / 2));
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  background: #000;
+
+  border-top:
+    1px solid rgba(255,255,255,.15);
+
+  box-sizing: border-box;
+}
+
+.footer-bottom span,
+.footer-bottom a {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  color: rgba(255,255,255,.65);
+
+  text-decoration: none;
+}
+
+.footer-bottom a {
+  transition: color .25s ease;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
+
+.footer-brand,
+.footer-links,
+.footer-connect {
+  opacity: 0;
+
+  transform: translateY(22px);
+
+  transition:
+    opacity .8s cubic-bezier(.22,1,.36,1),
+    transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.chandini-footer.footer-visible .footer-brand {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .05s;
+}
+
+.chandini-footer.footer-visible .footer-links {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .17s;
+}
+
+.chandini-footer.footer-visible .footer-connect {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .29s;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .footer-main {
+    padding: 50px 35px;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 45px;
+  }
+
+  .footer-connect {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    padding: 0 35px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .chandini-footer {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    background: #000;
+  }
+
+
+  /* IMAGE */
+
+  .footer-art {
+    width: 100%;
+
+    height: 220px;
+  }
+
+  .footer-art img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
+
+  /* MAIN */
+
+  .footer-main {
+    padding:
+      43px 20px
+      45px;
+
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+
+    background: #000;
+  }
+
+
+  /* BRAND */
+
+  .footer-brand h2 {
+    font-size: 45px;
+  }
+
+  .footer-brand > span {
+    margin-top: 11px;
+
+    font-size: 7px;
+
+    letter-spacing: 6px;
+  }
+
+  .footer-brand p {
+    margin-top: 21px;
+
+    font-size: 10px;
+  }
+
+
+  /* LINKS */
+
+  .footer-links {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 25px;
+  }
+
+  .footer-link-group a {
+    font-size: 13px;
+  }
+
+
+  /* CONNECT */
+
+  .footer-connect h3 {
+    max-width: 280px;
+
+    font-size: 35px;
+  }
+
+
+  /* SOCIALS */
+
+  .footer-socials a {
+    width: 37px;
+    height: 37px;
+
+    font-size: 13px;
+  }
+
+
+  /* BOTTOM */
+
+  .footer-bottom {
+    min-height: auto;
+
+    padding:
+      24px 20px
+      100px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    background: #000;
+  }
+
+  .footer-bottom span,
+  .footer-bottom a {
+    font-size: 6.5px;
+
+    letter-spacing: 1.6px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .footer-art {
+    height: 195px;
+  }
+
+  .footer-main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-brand h2 {
+    font-size: 41px;
+  }
+
+  .footer-connect h3 {
+    font-size: 32px;
+  }
+
+  .footer-bottom {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    padding-bottom: 95px;
+  }
+}
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        position:absolute;
+
+        top:78px;
+        left:0;
+
+        width:100%;
+
+        background:#fbf8f5;
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:25px 4%;
+
+        border-bottom:1px solid #ded3cc;
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .nav-menu{
+        display:block;
+    }
+
+    .shift-grid,
+    .future-grid,
+    .career-life-grid{
+        grid-template-columns:1fr;
+    }
+
+    .map-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .next-step-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .method-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .method-item:nth-child(2){
+        border-right:none;
+    }
+
+    .method-item:nth-child(-n+2){
+        border-bottom:1px solid #d9cdc5;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr 1fr;
+
+        gap:45px;
+    }
+
+    .footer-note{
+        border-left:none;
+
+        border-top:1px solid #5d514a;
+
+        padding-left:0;
+
+        padding-top:25px;
+    }
+
+    .videos-heading{
+        display:block;
+    }
+
+    .videos-heading-right{
+        margin-top:18px;
+    }
+
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .hero{
+        padding-top:125px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .section-title,
+    .shift h2,
+    .future-intro h2,
+    .career-life h2{
+        font-size:39px;
+    }
+
+    .map-grid{
+        grid-template-columns:1fr;
+    }
+
+    .next-step-grid{
+        grid-template-columns:1fr;
+    }
+
+    .next-bottom{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .small-video{
+        grid-template-columns:1fr;
+    }
+
+    .small-video-frame{
+        min-height:auto;
+
+        aspect-ratio:16/9;
+    }
+
+    .small-video-frame iframe{
+        min-height:0;
+    }
+
+    .method-grid{
+        grid-template-columns:1fr;
+    }
+
+    .method-item{
+        border-right:none;
+
+        border-bottom:1px solid #d9cdc5;
+    }
+
+    .method-item:last-child{
+        border-bottom:none;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr;
+
+        gap:38px;
+
+        padding-bottom:45px;
+    }
+
+    .footer-brand{
+        max-width:100%;
+    }
+
+    .footer-note{
+        padding-top:25px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .intention-box h2{
+        font-size:35px;
+    }
+
+    .intention-text{
+        font-size:20px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar">
+
+<div class="nav-inner">
+
+<a href="index.html" class="logo">
+
+<span class="logo-main">
+Chandini
+</span>
+
+<span class="logo-sub">
+CONNECTS
+</span>
+
+</a>
+
+
+<div class="nav-menu" onclick="toggleMenu()">
+☰
+</div>
+
+
+<ul class="nav-links" id="navLinks">
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="manifest.html" class="active">
+Manifest With Chandini
+</a>
+</li>
+
+<li>
+<a href="career.html">
+Career Connect
+</a>
+</li>
+
+<li>
+<a href="habits.html">
+Habit Trackers
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-copy">
+
+<div class="hero-label">
+MANIFEST WITH CHANDINI
+</div>
+
+<h1>
+Your next chapter
+<br>
+deserves a <span>vision.</span>
+</h1>
+
+<p class="hero-text">
+
+Manifestation is not only about wishing
+for something. It is about becoming clear
+about what you want, believing that it is
+possible, and taking intentional steps
+towards it.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#next-step" class="btn btn-dark">
+FIND YOUR NEXT STEP
+</a>
+
+<a href="#life-map" class="btn btn-light">
+EXPLORE THE METHOD
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SHIFT
+========================= -->
+
+<section class="shift">
+
+<div class="container">
+
+<div class="shift-grid">
+
+<div>
+
+<div class="section-label">
+THE SHIFT
+</div>
+
+<h2>
+From wishing
+<br>
+to becoming.
+</h2>
+
+</div>
+
+
+<div class="shift-content">
+
+<p>
+A vision becomes powerful when it is
+connected to the person you are becoming.
+</p>
+
+<p>
+Instead of only asking
+<strong>“What do I want?”</strong>,
+start asking
+<strong>“Who do I need to become?”</strong>
+</p>
+
+<p>
+Your career, lifestyle, finances,
+confidence and personal growth do not
+have to exist as separate goals.
+They can become part of one intentional life.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     LIFE MAP
+========================= -->
+
+<section class="life-map" id="life-map">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-label">
+YOUR LIFE MAP
+</div>
+
+<h2 class="section-title">
+Build a vision that feels like you.
+</h2>
+
+<p class="section-subtitle" style="margin-top:20px;">
+
+Instead of creating one giant goal,
+look at the different areas of your life
+and decide what your next version looks like.
+
+</p>
+
+</div>
+
+
+<div class="map-grid">
+
+
+<div class="map-card">
+
+<div class="map-number">01</div>
+
+<div class="map-icon">◌</div>
+
+<h3>
+Career
+</h3>
+
+<p>
+What kind of work would make you feel
+capable, independent and fulfilled?
+</p>
+
+</div>
+
+
+<div class="map-card">
+
+<div class="map-number">02</div>
+
+<div class="map-icon">⌂</div>
+
+<h3>
+Lifestyle
+</h3>
+
+<p>
+What does your ideal everyday life
+actually look and feel like?
+</p>
+
+</div>
+
+
+<div class="map-card">
+
+<div class="map-number">03</div>
+
+<div class="map-icon">◇</div>
+
+<h3>
+Financial
+</h3>
+
+<p>
+What does financial freedom and
+security mean to you?
+</p>
+
+</div>
+
+
+<div class="map-card">
+
+<div class="map-number">04</div>
+
+<div class="map-icon">✦</div>
+
+<h3>
+Self
+</h3>
+
+<p>
+Who are you becoming emotionally,
+mentally and personally?
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FUTURE SELF
+========================= -->
+
+<section class="future">
+
+<div class="container">
+
+<div class="future-grid">
+
+
+<div class="future-intro">
+
+<div class="section-label">
+MEET YOUR FUTURE SELF
+</div>
+
+<h2>
+Imagine the version
+of you who already
+made it.
+</h2>
+
+<p>
+You don't need to have every answer today.
+You only need enough clarity to take
+your next step.
+</p>
+
+</div>
+
+
+<div class="prompts">
+
+
+<div class="prompt">
+
+<span class="prompt-number">
+01
+</span>
+
+<p>
+What does my ideal ordinary day look like?
+</p>
+
+</div>
+
+
+<div class="prompt">
+
+<span class="prompt-number">
+02
+</span>
+
+<p>
+What kind of person do I want people
+to experience me as?
+</p>
+
+</div>
+
+
+<div class="prompt">
+
+<span class="prompt-number">
+03
+</span>
+
+<p>
+What would I do if I trusted myself more?
+</p>
+
+</div>
+
+
+<div class="prompt">
+
+<span class="prompt-number">
+04
+</span>
+
+<p>
+What is one thing my future self
+would start today?
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     YOUR VISION → NEXT STEP
+========================= -->
+
+<section class="next-step" id="next-step">
+
+<div class="container">
+
+<div class="next-step-head">
+
+<div class="section-label">
+YOUR VISION → YOUR NEXT STEP
+</div>
+
+<h2 class="section-title">
+You don't need the whole plan.
+Just know what comes next.
+</h2>
+
+<p class="section-subtitle" style="margin-top:20px;">
+
+Clarity becomes useful when it turns into
+one simple action. Start with the area that
+matters most to you right now.
+
+</p>
+
+</div>
+
+
+<div class="next-step-grid">
+
+
+<div class="next-card">
+
+<div class="next-number">
+01 • CLARIFY
+</div>
+
+<h3>
+Know what you want.
+</h3>
+
+<p>
+Give yourself permission to want
+something different. Your direction
+starts with honesty.
+</p>
+
+<div class="next-arrow">
+→
+</div>
+
+</div>
+
+
+
+<div class="next-card">
+
+<div class="next-number">
+02 • CHOOSE
+</div>
+
+<h3>
+Choose one priority.
+</h3>
+
+<p>
+You don't have to change everything
+at once. Decide what deserves your
+attention first.
+</p>
+
+<div class="next-arrow">
+→
+</div>
+
+</div>
+
+
+
+<div class="next-card">
+
+<div class="next-number">
+03 • MOVE
+</div>
+
+<h3>
+Take one real step.
+</h3>
+
+<p>
+Turn your intention into something
+you can actually do today.
+Small movement creates momentum.
+</p>
+
+<div class="next-arrow">
+→
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="next-bottom">
+
+<p>
+<strong>Remember:</strong>
+Your next step does not have to be perfect.
+It only needs to move you closer to the
+person and life you are becoming.
+</p>
+
+<a
+href="#videos"
+class="btn btn-light">
+
+WATCH WITH CHANDINI
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     WATCH WITH CHANDINI
+========================= -->
+
+<section class="videos" id="videos">
+
+<div class="container">
+
+
+<div class="videos-heading">
+
+<div class="videos-heading-left">
+
+<div class="section-label">
+WATCH WITH CHANDINI
+</div>
+
+<h2 class="section-title">
+
+Ideas to watch.
+<br>
+
+Thoughts to carry with you.
+
+</h2>
+
+</div>
+
+
+<div class="videos-heading-right">
+
+<p class="section-subtitle">
+
+A collection of Chandini's videos on
+career, confidence, mindset and
+creating intentional change.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="video-grid">
+
+
+<!-- VIDEO 1 -->
+
+<div class="featured-video">
+
+<div class="video-frame">
+
+<iframe
+src="https://www.youtube.com/embed/qHBtdNjh4CU"
+title="Chandini Connects Video 1"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+
+</div>
+
+
+<div class="featured-info">
+
+<div class="video-tag">
+FEATURED • CHANDINI CONNECTS
+</div>
+
+<h3>
+Chandini Connects
+</h3>
+
+<p>
+Watch the latest video and take
+one useful thought with you.
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- VIDEO 2 + VIDEO 3 -->
+
+<div class="small-video-column">
+
+
+<div class="small-video">
+
+<div class="small-video-frame">
+
+<iframe
+src="https://www.youtube.com/embed/SgFidwur9JE"
+title="Chandini Connects Video 2"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+
+</div>
+
+
+<div class="small-video-info">
+
+<div class="video-tag">
+CAREER
+</div>
+
+<h4>
+Career & Growth
+</h4>
+
+<p>
+Ideas and thoughts to help
+you move forward.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="small-video">
+
+<div class="small-video-frame">
+
+<iframe
+src="https://www.youtube.com/embed/omYgMwtaKZs"
+title="Chandini Connects Video 3"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+referrerpolicy="strict-origin-when-cross-origin"
+allowfullscreen>
+</iframe>
+
+</div>
+
+
+<div class="small-video-info">
+
+<div class="video-tag">
+MINDSET
+</div>
+
+<h4>
+Mindset & Growth
+</h4>
+
+<p>
+A reminder to believe in yourself
+and keep moving forward.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CAREER × LIFE
+========================= -->
+
+<section class="career-life">
+
+<div class="container">
+
+<div class="career-life-grid">
+
+
+<div>
+
+<div class="section-label">
+CAREER × LIFE
+</div>
+
+<h2>
+Your career is
+part of your life
+vision.
+</h2>
+
+<p>
+Career growth becomes more meaningful
+when it supports the life you actually
+want to build.
+</p>
+
+<a
+href="career.html"
+class="btn btn-light">
+
+EXPLORE CAREER CONNECT
+
+</a>
+
+</div>
+
+
+<div class="connection-card">
+
+<span>
+THE CONNECTION
+</span>
+
+<h3>
+Clarity in life.
+Clarity in career.
+</h3>
+
+<p>
+Know what you want personally,
+understand where you want to go
+professionally, and take practical
+steps towards both.
+</p>
+
+<a
+href="career.html"
+class="btn btn-dark">
+
+VIEW CAREER SERVICES →
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CHANDINI METHOD
+========================= -->
+
+<section class="method">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="section-label">
+THE CHANDINI METHOD
+</div>
+
+<h2 class="section-title">
+A vision needs movement.
+</h2>
+
+<p
+class="section-subtitle"
+style="margin-top:20px;">
+
+Manifestation becomes powerful when
+your mindset and actions move together.
+
+</p>
+
+</div>
+
+
+<div class="method-grid">
+
+
+<div class="method-item">
+
+<span>
+01
+</span>
+
+<h3>
+Vision
+</h3>
+
+<p>
+Get clear about what you want
+and why it matters to you.
+</p>
+
+</div>
+
+
+<div class="method-item">
+
+<span>
+02
+</span>
+
+<h3>
+Believe
+</h3>
+
+<p>
+Build trust in yourself and
+your ability to grow.
+</p>
+
+</div>
+
+
+<div class="method-item">
+
+<span>
+03
+</span>
+
+<h3>
+Act
+</h3>
+
+<p>
+Turn your vision into small,
+practical and consistent actions.
+</p>
+
+</div>
+
+
+<div class="method-item">
+
+<span>
+04
+</span>
+
+<h3>
+Repeat
+</h3>
+
+<p>
+Keep showing up until the
+new version of your life feels normal.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     TODAY'S INTENTION
+========================= -->
+
+<section class="intention">
+
+<div class="container">
+
+<div class="intention-box">
+
+<div class="section-label">
+TODAY'S INTENTION
+</div>
+
+<h2>
+A small reminder for today.
+</h2>
+
+<div
+class="intention-text"
+id="intentionText">
+
+I am allowed to grow at my own pace.
+
+</div>
+
+<button
+class="intention-btn"
+onclick="newIntention()">
+
+GIVE ME ANOTHER REMINDER
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     CHANDINI CONNECTS FOOTER
+========================================= -->
+
+<footer class="chandini-footer">
+
+  <!-- FOOTER ART -->
+  <div class="footer-art">
+    <img src="footer.webp" alt="Chandini Connects">
+  </div>
+
+
+  <!-- MAIN FOOTER -->
+  <div class="footer-main">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+
+      <h2>Chandini</h2>
+      <span>CONNECTS</span>
+
+      <p>
+        Learn with clarity.<br>
+        Grow with confidence.<br>
+        Create with purpose.
+      </p>
+
+    </div>
+
+
+    <!-- LINKS -->
+    <div class="footer-links">
+
+      <div class="footer-link-group">
+
+        <span>EXPLORE</span>
+
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#courses">Courses</a>
+        <a href="#workshops">Workshops</a>
+
+      </div>
+
+
+      <div class="footer-link-group">
+
+        <span>CONNECT</span>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="https://www.instagram.com/chandini_connects/"
+           target="_blank">
+          Instagram
+        </a>
+
+        <a href="https://www.youtube.com/@chandiniconnects/featured" class="social" target="_blank">
+          YouTube
+        </a>
+
+        <a href="#" target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONNECT -->
+    <div class="footer-connect">
+
+      <span>LET'S CONNECT</span>
+
+      <h3>
+        Let’s learn,<br>
+        grow & <em>create.</em>
+      </h3>
+
+      <div class="footer-socials">
+
+        <a href="https://www.instagram.com/chandini_connects/"
+           target="_blank"
+           aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.youtube.com/@chandiniconnects/featured" class="social"
+           target="_blank"
+           aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="#"
+           target="_blank"
+           aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="mailto:chandiniconnects@gmail.com"
+           aria-label="Email">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 CHANDINI CONNECTS
+    </span>
+
+    <span>
+      LEARN • GROW • CREATE • TOGETHER
+    </span>
+
+    <a href="#top">
+      BACK TO TOP ↑
+    </a>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================
+   MOBILE NAV
+========================= */
+
+function toggleMenu(){
+
+    const navLinks =
+        document.getElementById("navLinks");
+
+    navLinks.classList.toggle("show");
+
+}
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener(
+        "click",
+        function(){
+
+            document
+            .getElementById("navLinks")
+            .classList.remove("show");
+
+        }
+    );
+
+});
+
+
+
+/* =========================
+   DAILY INTENTION
+========================= */
+
+const intentions = [
+
+    "I am allowed to grow at my own pace.",
+
+    "I can start before I feel completely ready.",
+
+    "The life I want is built one choice at a time.",
+
+    "I trust myself to figure things out.",
+
+    "Small steps still count.",
+
+    "I am becoming more confident every day.",
+
+    "I don't need to have everything figured out today.",
+
+    "My future deserves my attention today.",
+
+    "I choose progress over perfection.",
+
+    "I am capable of creating a life that feels like mine."
+
+];
+
+
+function newIntention(){
+
+    const text =
+        document.getElementById(
+            "intentionText"
+        );
+
+    const randomIndex =
+        Math.floor(
+            Math.random() *
+            intentions.length
+        );
+
+
+    text.style.opacity = "0";
+
+
+    setTimeout(function(){
+
+        text.textContent =
+            intentions[randomIndex];
+
+        text.style.opacity = "1";
+
+    },200);
+
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const footer =
+    document.querySelector(".chandini-footer");
+
+  if (!footer) return;
+
+
+  const footerObserver =
+    new IntersectionObserver(
+      function (entries) {
+
+        entries.forEach(function (entry) {
+
+          if (entry.isIntersecting) {
+
+            footer.classList.add(
+              "footer-visible"
+            );
+
+            footerObserver.unobserve(
+              footer
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.08
+      }
+    );
+
+
+  footerObserver.observe(footer);
+
+});
+</script>
+
+</script>
+
+
+</body>
+</html>

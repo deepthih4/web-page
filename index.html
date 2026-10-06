@@ -1,0 +1,2362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chandini CONNECTS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"DM Sans",sans-serif;
+    background:#fbf8f5;
+    color:#302824;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(251,248,245,.95);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #e5dcd5;
+}
+
+.navbar{
+    width:min(1180px,92%);
+    min-height:80px;
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+
+/* LOGO */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-box{
+    width:43px;
+    height:43px;
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#302824;
+    color:#fff;
+
+    font-family:"Playfair Display",serif;
+    font-size:22px;
+}
+
+.logo-text{
+    font-size:20px;
+    font-weight:700;
+}
+
+.logo-text span{
+    display:block;
+    font-size:9px;
+    letter-spacing:3px;
+    color:#a86f55;
+    margin-top:-3px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:13px;
+    font-weight:600;
+    color:#625751;
+    transition:.25s;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:#a86f55;
+}
+
+
+/* SOCIAL */
+
+.socials{
+    display:flex;
+    gap:8px;
+}
+
+.social{
+    padding:7px 12px;
+    border:1px solid #d9cec6;
+    border-radius:30px;
+    font-size:11px;
+    font-weight:700;
+    transition:.25s;
+}
+
+.social:hover{
+    background:#302824;
+    color:white;
+}
+
+
+/* MOBILE MENU */
+
+.menu{
+    display:none;
+    font-size:26px;
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    padding:105px 0 100px;
+    overflow:hidden;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:80px;
+}
+
+
+/* HERO TEXT */
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:11px;
+
+    color:#a86f55;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2.8px;
+
+    margin-bottom:23px;
+}
+
+.eyebrow:before{
+    content:"";
+    width:32px;
+    height:1px;
+    background:#a86f55;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(52px,6vw,78px);
+    line-height:1.03;
+    letter-spacing:-2px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:#a86f55;
+    font-style:italic;
+}
+
+.hero-text{
+    max-width:600px;
+    color:#746962;
+    font-size:17px;
+    line-height:1.9;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+}
+
+
+/* BUTTONS */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:14px 24px;
+
+    border-radius:7px;
+
+    font-size:12px;
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    transition:.25s;
+}
+
+.btn-dark{
+    background:#302824;
+    color:white;
+}
+
+.btn-dark:hover{
+    background:#a86f55;
+    transform:translateY(-2px);
+}
+
+.btn-light{
+    border:1px solid #d5c9c1;
+    background:white;
+    color:#403732;
+}
+
+.btn-light:hover{
+    border-color:#a86f55;
+    color:#a86f55;
+}
+
+
+/* =====================================================
+   HERO PHOTO
+===================================================== */
+
+.hero-visual{
+    position:relative;
+    height:500px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+/* OUTER CIRCLE */
+
+.hero-circle{
+    width:405px;
+    height:405px;
+
+    border-radius:50%;
+
+    background:#eee1d8;
+
+    border:1px solid #dcc7b9;
+
+    position:absolute;
+}
+
+.hero-circle:before{
+    content:"";
+
+    position:absolute;
+
+    inset:25px;
+
+    border:1px solid #d4b9a9;
+
+    border-radius:50%;
+}
+
+
+/* PHOTO CARD */
+
+.hero-center{
+    width:300px;
+
+    background:white;
+
+    border:1px solid #e3d7cf;
+
+    border-radius:20px;
+
+    padding:15px;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+    box-shadow:
+        0 25px 70px rgba(55,40,32,.14);
+}
+
+
+/* PHOTO */
+
+.hero-photo{
+    width:268px;
+    height:310px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    display:block;
+
+    margin:auto;
+
+    background:#eee1d8;
+}
+
+
+/* PHOTO TEXT */
+
+.hero-photo-text{
+    padding:16px 8px 10px;
+}
+
+.hero-photo-text h3{
+    font-family:"Playfair Display",serif;
+    font-size:24px;
+    margin-bottom:3px;
+}
+
+.hero-photo-text p{
+    font-size:11px;
+    color:#776b65;
+}
+
+
+/* FLOATING CARDS */
+
+.floating-card{
+    position:absolute;
+    z-index:3;
+
+    background:white;
+
+    border:1px solid #dfd4cd;
+
+    padding:13px 18px;
+
+    border-radius:12px;
+
+    font-size:11px;
+    font-weight:700;
+
+    box-shadow:
+        0 12px 30px rgba(55,40,32,.09);
+}
+
+.float-one{
+    top:45px;
+    right:0;
+}
+
+.float-two{
+    bottom:45px;
+    left:0;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+    background:#f2ebe6;
+    padding:105px 0;
+}
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:80px;
+    align-items:center;
+}
+
+.section-label{
+    color:#a86f55;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:2.5px;
+    margin-bottom:15px;
+}
+
+.intro h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,4vw,55px);
+    line-height:1.1;
+}
+
+.intro-content p{
+    color:#716761;
+    font-size:16px;
+    line-height:1.9;
+    margin-bottom:17px;
+}
+
+
+/* =====================================================
+   AREAS
+===================================================== */
+
+.areas{
+    padding:110px 0;
+}
+
+.section-heading{
+    max-width:700px;
+    margin:0 auto 55px;
+    text-align:center;
+}
+
+.section-heading h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,4vw,53px);
+    line-height:1.1;
+    margin-bottom:16px;
+}
+
+.section-heading p{
+    color:#766b65;
+    font-size:15px;
+}
+
+.area-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.area-card{
+    background:white;
+    border:1px solid #e2d8d1;
+    border-radius:18px;
+    padding:34px;
+    position:relative;
+    transition:.3s;
+}
+
+.area-card:hover{
+    transform:translateY(-7px);
+    box-shadow:
+        0 18px 45px rgba(50,38,30,.09);
+}
+
+.area-number{
+    font-family:"Playfair Display",serif;
+    font-size:42px;
+    color:#c19b86;
+    margin-bottom:20px;
+}
+
+.area-card h3{
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+    margin-bottom:12px;
+}
+
+.area-card p{
+    color:#766b65;
+    font-size:14px;
+    line-height:1.8;
+}
+
+.area-link{
+    display:inline-block;
+    margin-top:20px;
+    color:#a86f55;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:.6px;
+}
+
+
+/* =====================================================
+   WHY CHANDINI CONNECTS
+===================================================== */
+
+.why{
+    background:#302824;
+    color:white;
+    padding:105px 0;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:90px;
+    align-items:center;
+}
+
+.why .section-label{
+    color:#d1a18a;
+}
+
+.why h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,4vw,56px);
+    line-height:1.1;
+}
+
+.why-right{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+}
+
+.why-item{
+    border-top:1px solid #675950;
+    padding-top:20px;
+}
+
+.why-item span{
+    font-size:11px;
+    color:#d1a18a;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.why-item h3{
+    font-family:"Playfair Display",serif;
+    font-size:22px;
+    margin:9px 0;
+}
+
+.why-item p{
+    color:#c8beb9;
+    font-size:13px;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   JOURNEY
+===================================================== */
+
+.journey{
+    padding:110px 0;
+}
+
+.journey-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.journey-card{
+    text-align:center;
+    padding:20px;
+}
+
+.journey-icon{
+    width:55px;
+    height:55px;
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:#eee1d8;
+    color:#a86f55;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-family:"Playfair Display",serif;
+    font-size:20px;
+}
+
+.journey-card h3{
+    font-family:"Playfair Display",serif;
+    font-size:21px;
+    margin-bottom:9px;
+}
+
+.journey-card p{
+    color:#766b65;
+    font-size:13px;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote-section{
+    background:#f2ebe6;
+    padding:105px 20px;
+    text-align:center;
+}
+
+.quote-inner{
+    max-width:850px;
+    margin:auto;
+}
+
+.quote-mark{
+    font-family:"Playfair Display",serif;
+    font-size:70px;
+    color:#b88b73;
+    line-height:.6;
+}
+
+.quote-inner p{
+    font-family:"Playfair Display",serif;
+    font-style:italic;
+    font-size:clamp(27px,3vw,40px);
+    line-height:1.45;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta{
+    width:min(1080px,92%);
+
+    margin:100px auto;
+
+    padding:70px 35px;
+
+    background:#eee1d8;
+
+    border:1px solid #ddc8ba;
+
+    border-radius:25px;
+
+    text-align:center;
+}
+
+.cta h2{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(38px,4vw,53px);
+    margin-bottom:14px;
+}
+
+.cta p{
+    max-width:650px;
+    margin:0 auto 28px;
+    color:#71655f;
+    font-size:15px;
+}
+
+
+/* =====================================================
+ /* =====================================================
+   CHANDINI CONNECTS FOOTER
+   BLACK + WHITE VERSION
+===================================================== */
+
+.chandini-footer {
+  position: relative;
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #000;
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FOOTER IMAGE
+===================================================== */
+
+.footer-art {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  line-height: 0;
+
+  background: #f7f7f4;
+}
+
+.footer-art img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.footer-main {
+  width: 100%;
+
+  margin: 0;
+
+  padding:
+    60px
+    max(35px, calc((100% - 1180px) / 2));
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    1fr
+    1fr;
+
+  align-items: start;
+
+  gap: 70px;
+
+  background: #000;
+
+  border-top:
+    1px solid rgba(255,255,255,.15);
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.footer-brand h2 {
+  margin: 0;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: 55px;
+  font-weight: 400;
+
+  line-height: .9;
+
+  letter-spacing: -2px;
+
+  color: #fff;
+}
+
+.footer-brand > span {
+  display: block;
+
+  margin-top: 13px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 7px;
+
+  color: #fff;
+}
+
+.footer-brand p {
+  margin: 28px 0 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+
+  color: rgba(255,255,255,.65);
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.footer-links {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 40px;
+}
+
+.footer-link-group {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+.footer-link-group > span,
+.footer-connect > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,.45);
+}
+
+.footer-link-group a {
+  display: inline-block;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease;
+}
+
+.footer-link-group a:hover {
+  transform: translateX(4px);
+
+  opacity: .55;
+}
+
+
+/* =====================================================
+   CONNECT
+===================================================== */
+
+.footer-connect h3 {
+  margin: 0 0 27px;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: clamp(31px, 3vw, 45px);
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+  color: #fff;
+}
+
+.footer-connect h3 em {
+  color: #fff;
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.footer-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.footer-socials a {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(255,255,255,.35);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    color .3s ease;
+}
+
+.footer-socials a i {
+  color: inherit;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-4px);
+
+  background: #fff;
+
+  color: #000;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+  width: 100%;
+
+  min-height: 68px;
+
+  padding:
+    0
+    max(35px, calc((100% - 1180px) / 2));
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  background: #000;
+
+  border-top:
+    1px solid rgba(255,255,255,.15);
+
+  box-sizing: border-box;
+}
+
+.footer-bottom span,
+.footer-bottom a {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  color: rgba(255,255,255,.65);
+
+  text-decoration: none;
+}
+
+.footer-bottom a {
+  transition: color .25s ease;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
+
+.footer-brand,
+.footer-links,
+.footer-connect {
+  opacity: 0;
+
+  transform: translateY(22px);
+
+  transition:
+    opacity .8s cubic-bezier(.22,1,.36,1),
+    transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.chandini-footer.footer-visible .footer-brand {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .05s;
+}
+
+.chandini-footer.footer-visible .footer-links {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .17s;
+}
+
+.chandini-footer.footer-visible .footer-connect {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .29s;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .footer-main {
+    padding: 50px 35px;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 45px;
+  }
+
+  .footer-connect {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    padding: 0 35px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .chandini-footer {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    background: #000;
+  }
+
+
+  /* IMAGE */
+
+  .footer-art {
+    width: 100%;
+
+    height: 220px;
+  }
+
+  .footer-art img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
+
+  /* MAIN */
+
+  .footer-main {
+    padding:
+      43px 20px
+      45px;
+
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+
+    background: #000;
+  }
+
+
+  /* BRAND */
+
+  .footer-brand h2 {
+    font-size: 45px;
+  }
+
+  .footer-brand > span {
+    margin-top: 11px;
+
+    font-size: 7px;
+
+    letter-spacing: 6px;
+  }
+
+  .footer-brand p {
+    margin-top: 21px;
+
+    font-size: 10px;
+  }
+
+
+  /* LINKS */
+
+  .footer-links {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 25px;
+  }
+
+  .footer-link-group a {
+    font-size: 13px;
+  }
+
+
+  /* CONNECT */
+
+  .footer-connect h3 {
+    max-width: 280px;
+
+    font-size: 35px;
+  }
+
+
+  /* SOCIALS */
+
+  .footer-socials a {
+    width: 37px;
+    height: 37px;
+
+    font-size: 13px;
+  }
+
+
+  /* BOTTOM */
+
+  .footer-bottom {
+    min-height: auto;
+
+    padding:
+      24px 20px
+      100px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    background: #000;
+  }
+
+  .footer-bottom span,
+  .footer-bottom a {
+    font-size: 6.5px;
+
+    letter-spacing: 1.6px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .footer-art {
+    height: 195px;
+  }
+
+  .footer-main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-brand h2 {
+    font-size: 41px;
+  }
+
+  .footer-connect h3 {
+    font-size: 32px;
+  }
+
+  .footer-bottom {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    padding-bottom: 95px;
+  }
+}
+
+/* =====================================================
+   RESPONSIVE FOOTER
+===================================================== */
+
+@media(max-width:900px){
+
+    .footer-main{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:45px;
+    }
+
+    .footer-note{
+
+        border-left:none;
+
+        border-top:1px solid #5d514a;
+
+        padding-left:0;
+
+        padding-top:25px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:950px){
+
+    .nav-links{
+
+        position:absolute;
+
+        top:80px;
+
+        left:0;
+
+        width:100%;
+
+        background:#fbf8f5;
+
+        border-bottom:1px solid #e3d8d0;
+
+        padding:25px 6%;
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .socials{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-grid{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+    .hero-visual{
+        height:450px;
+    }
+
+    .intro-grid,
+    .why-grid{
+
+        grid-template-columns:1fr;
+
+        gap:45px;
+    }
+
+    .area-grid{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+    .journey-grid{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .navbar{
+        min-height:72px;
+    }
+
+    .hero{
+        padding:75px 0;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero-text{
+        font-size:15px;
+    }
+
+    .hero-visual{
+        height:390px;
+    }
+
+    .hero-circle{
+
+        width:295px;
+        height:295px;
+    }
+
+    .hero-center{
+        width:250px;
+        padding:12px;
+    }
+
+    .hero-photo{
+
+        width:226px;
+        height:260px;
+    }
+
+    .hero-photo-text{
+
+        padding:12px 5px 8px;
+    }
+
+    .hero-photo-text h3{
+        font-size:20px;
+    }
+
+    .float-one{
+
+        right:0;
+        top:15px;
+    }
+
+    .float-two{
+
+        left:0;
+        bottom:10px;
+    }
+
+    .intro,
+    .areas,
+    .why,
+    .journey{
+
+        padding:75px 0;
+    }
+
+    .area-grid{
+        grid-template-columns:1fr;
+    }
+
+    .why-right{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .journey-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta{
+
+        margin:65px auto;
+
+        padding:50px 22px;
+    }
+
+    .footer-main{
+
+        grid-template-columns:1fr;
+
+        gap:38px;
+
+        padding-bottom:45px;
+    }
+
+    .footer-brand{
+        max-width:100%;
+    }
+
+    .footer-note{
+
+        padding-top:25px;
+    }
+
+    .footer-bottom{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+}
+
+
+/* =====================================================
+   FOOTER SMALL SCREEN
+===================================================== */
+
+@media(max-width:600px){
+
+    .chandini-footer{
+
+        padding:60px 0 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+
+<a href="index.html" class="logo">
+
+<div class="logo-box">
+C
+</div>
+
+<div class="logo-text">
+
+Chandini
+
+<span>CONNECTS</span>
+
+</div>
+
+</a>
+
+
+<ul class="nav-links" id="navLinks">
+
+<li>
+<a href="index.html" class="active">
+Home
+</a>
+</li>
+
+<li>
+<a href="manifest.html">
+Manifest With Chandini
+</a>
+</li>
+
+<li>
+<a href="career.html">
+Career Connect
+</a>
+</li>
+
+<li>
+<a href="habits.html">
+Habit Trackers
+</a>
+</li>
+
+<li>
+<a href="contact.html">
+Contact
+</a>
+</li>
+
+</ul>
+
+
+<div class="socials">
+
+<a href="https://www.instagram.com/chandini_connects/" class="social">
+Instagram
+</a>
+
+<a href="https://www.youtube.com/@chandiniconnects/featured" class="social">
+YouTube
+</a>
+
+</div>
+
+
+<div class="menu" id="menu">
+☰
+</div>
+
+
+</nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+
+<div class="hero-content">
+
+
+<div class="eyebrow">
+WELCOME TO CHANDINI CONNECTS
+</div>
+
+
+<h1>
+
+Connect.<br>
+
+Grow.<br>
+
+<span>Become.</span>
+
+</h1>
+
+
+<p class="hero-text">
+
+A thoughtful space for career clarity,
+personal growth and better everyday habits —
+designed to help you take your next step
+with confidence.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a href="career.html"
+class="btn btn-dark">
+
+EXPLORE CAREER CONNECT
+
+</a>
+
+
+<a href="manifest.html"
+class="btn btn-light">
+
+DISCOVER CHANDINI CONNECTS
+
+</a>
+
+</div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     HERO PHOTO
+===================================================== -->
+
+<div class="hero-visual">
+
+
+<div class="hero-circle">
+</div>
+
+
+<div class="hero-center">
+
+
+<img
+src="chandinii.webp"
+alt="Chandini"
+class="hero-photo"
+onerror="this.style.display='none';document.getElementById('photoFallback').style.display='block';"
+>
+
+
+<div id="photoFallback"
+style="
+display:none;
+padding:90px 10px 110px;
+color:#a86f55;
+font-family:'Playfair Display',serif;
+font-size:45px;
+">
+
+CC
+
+</div>
+
+
+<div class="hero-photo-text">
+
+<h3>
+Chandini CONNECTS
+</h3>
+
+<p>
+Clarity for your career. Intention for your life.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="floating-card float-one">
+
+Career • Clarity
+
+</div>
+
+
+<div class="floating-card float-two">
+
+Habits • Growth
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<section class="intro" id="manifest">
+
+<div class="container intro-grid">
+
+
+<div>
+
+<div class="section-label">
+ABOUT CHANDINI CONNECTS
+</div>
+
+<h2>
+A space to help you move forward.
+</h2>
+
+</div>
+
+
+<div class="intro-content">
+
+<p>
+Sometimes you don't need more information.
+You need the right direction.
+</p>
+
+
+<p>
+Chandini Connects brings together practical
+career support, personal intention and simple
+systems that help you make progress.
+</p>
+
+
+<p>
+The goal is simple — make your next step
+clearer, more confident and more meaningful.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN AREAS
+===================================================== -->
+
+<section class="areas" id="habits">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="section-label">
+EXPLORE CHANDINI CONNECTS
+</div>
+
+<h2>
+Three Spaces. One Purpose.
+</h2>
+
+<p>
+Choose what you need right now and take
+your next step from there.
+</p>
+
+</div>
+
+
+
+<div class="area-grid">
+
+
+<div class="area-card">
+
+<div class="area-number">
+01
+</div>
+
+<h3>
+Career Connect
+</h3>
+
+<p>
+Practical career support designed to help
+you present yourself professionally,
+prepare better and gain clarity about your
+next career move.
+</p>
+
+<a href="career.html"
+class="area-link">
+
+EXPLORE CAREER CONNECT →
+
+</a>
+
+</div>
+
+
+
+<div class="area-card">
+
+<div class="area-number">
+02
+</div>
+
+<h3>
+Manifest With Chandini
+</h3>
+
+<p>
+A space for intention, mindset and
+thoughtful action — helping you focus
+on the person and life you want to build.
+</p>
+
+<a href="manifest.html"
+class="area-link">
+
+DISCOVER MORE →
+
+</a>
+
+</div>
+
+
+
+<div class="area-card">
+
+<div class="area-number">
+03
+</div>
+
+<h3>
+Habit Trackers
+</h3>
+
+<p>
+Simple and practical tracking tools to
+help you stay consistent, organised and
+accountable to the goals that matter.
+</p>
+
+<a href="contact.html"
+class="area-link">
+
+COMING SOON →
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY CHANDINI CONNECTS
+===================================================== -->
+
+<section class="why">
+
+<div class="container why-grid">
+
+
+<div>
+
+<div class="section-label">
+WHY CHANDINI CONNECTS
+</div>
+
+<h2>
+Because progress becomes easier when clarity comes first.
+</h2>
+
+</div>
+
+
+
+<div class="why-right">
+
+
+<div class="why-item">
+
+<span>
+01 — PRACTICAL
+</span>
+
+<h3>
+Real & Useful
+</h3>
+
+<p>
+Focused on things you can actually
+apply instead of unnecessary complexity.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<span>
+02 — PERSONAL
+</span>
+
+<h3>
+Your Journey
+</h3>
+
+<p>
+Your goals, your pace and your next step
+matter more than a one-size-fits-all path.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<span>
+03 — SIMPLE
+</span>
+
+<h3>
+Clear Direction
+</h3>
+
+<p>
+Break bigger goals into smaller,
+understandable and achievable actions.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<span>
+04 — CONSISTENT
+</span>
+
+<h3>
+Keep Growing
+</h3>
+
+<p>
+Small consistent actions can create
+meaningful long-term change.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     JOURNEY
+===================================================== -->
+
+<section class="journey">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="section-label">
+THE CHANDINI CONNECTS JOURNEY
+</div>
+
+<h2>
+Start Small. Move Forward.
+</h2>
+
+<p>
+You don't have to figure everything out
+at once.
+</p>
+
+</div>
+
+
+
+<div class="journey-grid">
+
+
+<div class="journey-card">
+
+<div class="journey-icon">
+1
+</div>
+
+<h3>
+Discover
+</h3>
+
+<p>
+Understand where you are
+and what you actually need.
+</p>
+
+</div>
+
+
+<div class="journey-card">
+
+<div class="journey-icon">
+2
+</div>
+
+<h3>
+Clarify
+</h3>
+
+<p>
+Turn confusion into a clearer
+direction and next step.
+</p>
+
+</div>
+
+
+<div class="journey-card">
+
+<div class="journey-icon">
+3
+</div>
+
+<h3>
+Act
+</h3>
+
+<p>
+Take practical action instead
+of waiting for everything to be perfect.
+</p>
+
+</div>
+
+
+<div class="journey-card">
+
+<div class="journey-icon">
+4
+</div>
+
+<h3>
+Grow
+</h3>
+
+<p>
+Keep improving through small
+consistent steps.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUOTE
+===================================================== -->
+
+<section class="quote-section">
+
+<div class="quote-inner">
+
+<div class="quote-mark">
+“
+</div>
+
+<p>
+You don't need to have everything
+figured out. You just need a clear
+enough next step.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta" id="contact">
+
+<div class="section-label">
+YOUR NEXT STEP STARTS HERE
+</div>
+
+<h2>
+Ready to move forward?
+</h2>
+
+<p>
+Explore Career Connect and find the
+support that fits your current career journey.
+</p>
+
+<a href="career.html"
+class="btn btn-dark">
+
+EXPLORE CAREER CONNECT
+
+</a>
+
+</section>
+
+
+
+<!-- =====================================================
+<!=========================================
+     CHANDINI CONNECTS FOOTER
+========================================= -->
+
+<footer class="chandini-footer">
+
+  <!-- FOOTER ART -->
+  <div class="footer-art">
+    <img src="footer.webp" alt="Chandini Connects">
+  </div>
+
+
+  <!-- MAIN FOOTER -->
+  <div class="footer-main">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+
+      <h2>Chandini</h2>
+      <span>CONNECTS</span>
+
+      <p>
+        Learn with clarity.<br>
+        Grow with confidence.<br>
+        Create with purpose.
+      </p>
+
+    </div>
+
+
+    <!-- LINKS -->
+    <div class="footer-links">
+
+      <div class="footer-link-group">
+
+        <span>EXPLORE</span>
+
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#courses">Courses</a>
+        <a href="#workshops">Workshops</a>
+
+      </div>
+
+
+      <div class="footer-link-group">
+
+        <span>CONNECT</span>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="https://www.instagram.com/chandini_connects/"
+           target="_blank">
+          Instagram
+        </a>
+
+        <a href="#" target="_blank">
+          YouTube
+        </a>
+
+        <a href="#" target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONNECT -->
+    <div class="footer-connect">
+
+      <span>LET'S CONNECT</span>
+
+      <h3>
+        Let’s learn,<br>
+        grow & <em>create.</em>
+      </h3>
+
+      <div class="footer-socials">
+
+        <a href="https://www.instagram.com/chandini_connects/"
+           target="_blank"
+           aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#"
+           target="_blank"
+           aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="#"
+           target="_blank"
+           aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="mailto:chandiniconnects@gmail.com"
+           aria-label="Email">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 CHANDINI CONNECTS
+    </span>
+
+    <span>
+      LEARN • GROW • CREATE • TOGETHER
+    </span>
+
+    <a href="#top">
+      BACK TO TOP ↑
+    </a>
+
+  </div>
+
+</footer>
+
+
+<!-- =====================================================
+     MOBILE MENU SCRIPT
+===================================================== -->
+
+<script>
+
+const menu =
+document.getElementById("menu");
+
+const navLinks =
+document.getElementById("navLinks");
+
+
+menu.addEventListener("click",function(){
+
+    navLinks.classList.toggle("open");
+
+});
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        navLinks.classList.remove("open");
+
+    });
+
+});
+
+</script>
+
+
+
+<!-- =====================================================
+     EXACT FOOTER ANIMATION SCRIPT
+===================================================== -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const footer =
+    document.querySelector(".chandini-footer");
+
+  if (!footer) return;
+
+
+  const footerObserver =
+    new IntersectionObserver(
+      function (entries) {
+
+        entries.forEach(function (entry) {
+
+          if (entry.isIntersecting) {
+
+            footer.classList.add(
+              "footer-visible"
+            );
+
+            footerObserver.unobserve(
+              footer
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.08
+      }
+    );
+
+
+  footerObserver.observe(footer);
+
+});
+</script>
+
+
+</body>
+
+</html>

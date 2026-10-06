@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Chandini CONNECTS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fbf8f5;
+    color:#302824;
+    font-family:"DM Sans",sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button,
+input,
+textarea{
+    font-family:"DM Sans",sans-serif;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:78px;
+
+    z-index:1000;
+
+    background:rgba(251,248,245,.93);
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(48,40,36,.08);
+}
+
+.nav-inner{
+    width:min(1180px,92%);
+    height:100%;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    flex-direction:column;
+    line-height:1;
+}
+
+.logo-main{
+    font-family:"Playfair Display",serif;
+    font-size:25px;
+    font-weight:600;
+}
+
+.logo-sub{
+    font-size:8px;
+    letter-spacing:4px;
+    color:#a86f55;
+    margin-top:5px;
+}
+
+.nav-links{
+    display:flex;
+    gap:32px;
+}
+
+.nav-links a{
+    font-size:12px;
+    color:#625851;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#a86f55;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    width:min(1180px,92%);
+    min-height:100vh;
+
+    margin:auto;
+
+    padding:145px 0 90px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hero-label{
+    color:#a86f55;
+
+    font-size:10px;
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    margin-bottom:28px;
+}
+
+.hero h1{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(60px,9vw,125px);
+
+    font-weight:500;
+
+    line-height:.88;
+
+    letter-spacing:-3px;
+
+    max-width:1100px;
+}
+
+.hero h1 span{
+    color:#a86f55;
+}
+
+.hero-bottom{
+    margin-top:60px;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:flex-end;
+
+    gap:50px;
+}
+
+.hero-description{
+    max-width:500px;
+
+    color:#71665f;
+
+    font-size:14px;
+
+    line-height:1.95;
+}
+
+.hero-arrow{
+    width:75px;
+    height:75px;
+
+    border:1px solid #cdbdb3;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:20px;
+
+    transition:.4s;
+}
+
+.hero-arrow:hover{
+    background:#302824;
+    color:white;
+    transform:translateY(5px);
+}
+
+
+/* =====================================================
+   DARK CONTACT INTRO
+===================================================== */
+
+.dark-section{
+    background:#302824;
+    color:white;
+
+    padding:120px 0;
+}
+
+.container{
+    width:min(1080px,90%);
+    margin:auto;
+}
+
+.contact-intro{
+    display:grid;
+
+    grid-template-columns:.75fr 1.25fr;
+
+    gap:100px;
+}
+
+.label{
+    color:#d1a18a;
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+}
+
+.contact-intro h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(45px,6vw,75px);
+
+    line-height:1;
+
+    font-weight:500;
+
+    margin-top:22px;
+}
+
+.contact-intro-right{
+    padding-top:5px;
+}
+
+.contact-intro-right p{
+    color:#c5bbb5;
+
+    font-size:15px;
+
+    line-height:2;
+
+    max-width:600px;
+}
+
+.email-large{
+    display:inline-block;
+
+    margin-top:45px;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(25px,3vw,42px);
+
+    color:#fff;
+
+    border-bottom:1px solid #806e64;
+
+    padding-bottom:8px;
+
+    transition:.35s;
+}
+
+.email-large:hover{
+    color:#d1a18a;
+
+    border-color:#d1a18a;
+}
+
+
+/* =====================================================
+   WHY CONTACT
+===================================================== */
+
+.why{
+    padding:125px 0;
+}
+
+.section-heading{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-end;
+
+    gap:40px;
+
+    margin-bottom:65px;
+}
+
+.section-heading h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(45px,6vw,72px);
+
+    line-height:.98;
+
+    font-weight:500;
+}
+
+.section-heading p{
+    max-width:340px;
+
+    color:#71665f;
+
+    font-size:13px;
+
+    line-height:1.9;
+}
+
+.cards{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    border-top:1px solid #d6c9c0;
+}
+
+.card{
+    min-height:270px;
+
+    padding:32px 28px;
+
+    border-right:1px solid #d6c9c0;
+    border-bottom:1px solid #d6c9c0;
+
+    position:relative;
+
+    transition:.4s;
+}
+
+.card:last-child{
+    border-right:none;
+}
+
+.card:hover{
+    background:#eee5de;
+
+    transform:translateY(-7px);
+}
+
+.card-number{
+    color:#a86f55;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+}
+
+.card-icon{
+    position:absolute;
+
+    right:25px;
+    top:25px;
+
+    width:38px;
+    height:38px;
+
+    border:1px solid #cbbab0;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:14px;
+}
+
+.card h3{
+    font-family:"Playfair Display",serif;
+
+    font-size:29px;
+
+    font-weight:500;
+
+    margin-top:80px;
+}
+
+.card p{
+    color:#756961;
+
+    font-size:12px;
+
+    line-height:1.8;
+
+    margin-top:13px;
+}
+
+
+/* =====================================================
+   MESSAGE AREA
+===================================================== */
+
+.message{
+    background:#eee5de;
+
+    padding:125px 0;
+}
+
+.message-grid{
+    display:grid;
+
+    grid-template-columns:.8fr 1.2fr;
+
+    gap:100px;
+}
+
+.message-copy h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(48px,6vw,75px);
+
+    font-weight:500;
+
+    line-height:.95;
+
+    margin-top:22px;
+}
+
+.message-copy p{
+    max-width:350px;
+
+    color:#756961;
+
+    font-size:13px;
+
+    line-height:1.9;
+
+    margin-top:28px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+}
+
+.field{
+    position:relative;
+}
+
+.field label{
+    display:block;
+
+    color:#806e64;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:8px;
+}
+
+.field input,
+.field textarea{
+    width:100%;
+
+    border:0;
+
+    border-bottom:1px solid #b8a89e;
+
+    background:transparent;
+
+    outline:none;
+
+    padding:12px 0;
+
+    color:#302824;
+
+    font-size:14px;
+}
+
+.field input:focus,
+.field textarea:focus{
+    border-color:#a86f55;
+}
+
+.field textarea{
+    height:125px;
+
+    resize:none;
+}
+
+.send{
+    align-self:flex-start;
+
+    margin-top:5px;
+
+    padding:16px 32px;
+
+    border:none;
+
+    background:#302824;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    font-size:10px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    transition:.35s;
+}
+
+.send:hover{
+    background:#a86f55;
+
+    transform:translateY(-3px);
+}
+
+.success{
+    display:none;
+
+    padding:16px;
+
+    background:#ded0c6;
+
+    color:#5d4c43;
+
+    font-size:12px;
+
+    line-height:1.7;
+}
+
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.social{
+    padding:125px 0;
+
+    text-align:center;
+}
+
+.social .label{
+    display:block;
+}
+
+.social h2{
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(45px,6vw,75px);
+
+    font-weight:500;
+
+    margin-top:20px;
+}
+
+.social p{
+    color:#756961;
+
+    font-size:13px;
+
+    margin-top:20px;
+}
+
+.social-links{
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+}
+
+.social-link{
+    padding:15px 28px;
+
+    border:1px solid #cdbeb5;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    transition:.35s;
+}
+
+.social-link:hover{
+    background:#302824;
+
+    border-color:#302824;
+
+    color:white;
+}
+
+
+/* =====================================================
+   FINAL QUOTE
+===================================================== */
+
+.quote{
+    background:#d9c9be;
+
+    padding:110px 20px;
+
+    text-align:center;
+}
+
+.quote span{
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    color:#806257;
+}
+
+.quote h2{
+    max-width:850px;
+
+    margin:25px auto 0;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(35px,5vw,60px);
+
+    line-height:1.2;
+
+    font-weight:500;
+}
+
+
+/* =====================================================
+   CHANDINI CONNECTS FOOTER
+   BLACK + WHITE VERSION
+===================================================== */
+
+.chandini-footer {
+  position: relative;
+  width: 100% !important;
+  max-width: none !important;
+
+  margin: 0 !important;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: #000;
+  color: #fff;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FOOTER IMAGE
+===================================================== */
+
+.footer-art {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  line-height: 0;
+
+  background: #f7f7f4;
+}
+
+.footer-art img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.footer-main {
+  width: 100%;
+
+  margin: 0;
+
+  padding:
+    60px
+    max(35px, calc((100% - 1180px) / 2));
+
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    1fr
+    1fr;
+
+  align-items: start;
+
+  gap: 70px;
+
+  background: #000;
+
+  border-top:
+    1px solid rgba(255,255,255,.15);
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.footer-brand h2 {
+  margin: 0;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: 55px;
+  font-weight: 400;
+
+  line-height: .9;
+
+  letter-spacing: -2px;
+
+  color: #fff;
+}
+
+.footer-brand > span {
+  display: block;
+
+  margin-top: 13px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 8px;
+  font-weight: 500;
+
+  letter-spacing: 7px;
+
+  color: #fff;
+}
+
+.footer-brand p {
+  margin: 28px 0 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+
+  line-height: 1.8;
+
+  color: rgba(255,255,255,.65);
+}
+
+
+/* =====================================================
+   LINKS
+===================================================== */
+
+.footer-links {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap: 40px;
+}
+
+.footer-link-group {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 12px;
+}
+
+.footer-link-group > span,
+.footer-connect > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: rgba(255,255,255,.45);
+}
+
+.footer-link-group a {
+  display: inline-block;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  transition:
+    transform .3s ease,
+    opacity .3s ease;
+}
+
+.footer-link-group a:hover {
+  transform: translateX(4px);
+
+  opacity: .55;
+}
+
+
+/* =====================================================
+   CONNECT
+===================================================== */
+
+.footer-connect h3 {
+  margin: 0 0 27px;
+
+  font-family: "Bodoni Moda", serif;
+
+  font-size: clamp(31px, 3vw, 45px);
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+  color: #fff;
+}
+
+.footer-connect h3 em {
+  color: #fff;
+  font-weight: 400;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.footer-socials {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.footer-socials a {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(255,255,255,.35);
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: #fff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    color .3s ease;
+}
+
+.footer-socials a i {
+  color: inherit;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-4px);
+
+  background: #fff;
+
+  color: #000;
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom {
+  width: 100%;
+
+  min-height: 68px;
+
+  padding:
+    0
+    max(35px, calc((100% - 1180px) / 2));
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  background: #000;
+
+  border-top:
+    1px solid rgba(255,255,255,.15);
+
+  box-sizing: border-box;
+}
+
+.footer-bottom span,
+.footer-bottom a {
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 7px;
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  color: rgba(255,255,255,.65);
+
+  text-decoration: none;
+}
+
+.footer-bottom a {
+  transition: color .25s ease;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
+
+.footer-brand,
+.footer-links,
+.footer-connect {
+  opacity: 0;
+
+  transform: translateY(22px);
+
+  transition:
+    opacity .8s cubic-bezier(.22,1,.36,1),
+    transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.chandini-footer.footer-visible .footer-brand {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .05s;
+}
+
+.chandini-footer.footer-visible .footer-links {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .17s;
+}
+
+.chandini-footer.footer-visible .footer-connect {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: .29s;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+  .footer-main {
+    padding: 50px 35px;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 45px;
+  }
+
+  .footer-connect {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    padding: 0 35px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .chandini-footer {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    background: #000;
+  }
+
+
+  /* IMAGE */
+
+  .footer-art {
+    width: 100%;
+
+    height: 220px;
+  }
+
+  .footer-art img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center center;
+  }
+
+
+  /* MAIN */
+
+  .footer-main {
+    padding:
+      43px 20px
+      45px;
+
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+
+    background: #000;
+  }
+
+
+  /* BRAND */
+
+  .footer-brand h2 {
+    font-size: 45px;
+  }
+
+  .footer-brand > span {
+    margin-top: 11px;
+
+    font-size: 7px;
+
+    letter-spacing: 6px;
+  }
+
+  .footer-brand p {
+    margin-top: 21px;
+
+    font-size: 10px;
+  }
+
+
+  /* LINKS */
+
+  .footer-links {
+    grid-template-columns:
+      1fr 1fr;
+
+    gap: 25px;
+  }
+
+  .footer-link-group a {
+    font-size: 13px;
+  }
+
+
+  /* CONNECT */
+
+  .footer-connect h3 {
+    max-width: 280px;
+
+    font-size: 35px;
+  }
+
+
+  /* SOCIALS */
+
+  .footer-socials a {
+    width: 37px;
+    height: 37px;
+
+    font-size: 13px;
+  }
+
+
+  /* BOTTOM */
+
+  .footer-bottom {
+    min-height: auto;
+
+    padding:
+      24px 20px
+      100px;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 11px;
+
+    background: #000;
+  }
+
+  .footer-bottom span,
+  .footer-bottom a {
+    font-size: 6.5px;
+
+    letter-spacing: 1.6px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .footer-art {
+    height: 195px;
+  }
+
+  .footer-main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .footer-brand h2 {
+    font-size: 41px;
+  }
+
+  .footer-connect h3 {
+    font-size: 32px;
+  }
+
+  .footer-bottom {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    padding-bottom: 95px;
+  }
+}
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:900px){
+
+    .nav-links{
+        gap:15px;
+    }
+
+    .contact-intro,
+    .message-grid{
+        grid-template-columns:1fr;
+
+        gap:55px;
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .card:nth-child(2){
+        border-right:none;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr 1fr;
+
+        gap:45px;
+    }
+
+    .footer-note{
+        border-left:none;
+
+        border-top:1px solid #5d514a;
+
+        padding-left:0;
+
+        padding-top:25px;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .hero h1{
+        letter-spacing:-1px;
+    }
+
+    .hero-bottom{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .hero-arrow{
+        width:60px;
+        height:60px;
+    }
+
+    .dark-section,
+    .why,
+    .message,
+    .social{
+        padding:90px 0;
+    }
+
+    .section-heading{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        border-right:none;
+    }
+
+    .social-links{
+        flex-direction:column;
+
+        align-items:center;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr;
+
+        gap:38px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar">
+
+<div class="nav-inner">
+
+<a href="index.html" class="logo">
+
+<span class="logo-main">
+Chandini
+</span>
+
+<span class="logo-sub">
+CONNECTS
+</span>
+
+</a>
+
+
+<div class="nav-links">
+
+<a href="index.html">
+Home
+</a>
+
+<a href="manifest.html">
+Manifest With Chandini
+</a>
+
+<a href="career.html">
+Career Connect
+</a>
+
+<a href="habits.html">
+Habit Trackers
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+<p class="hero-label">
+CONTACT • CONNECT • BEGIN
+</p>
+
+
+<h1>
+
+Let's make your<br>
+
+<span>next step clearer.</span>
+
+</h1>
+
+
+<div class="hero-bottom">
+
+<p class="hero-description">
+
+Whether you're thinking about your career,
+working on yourself, exploring an idea,
+or simply want to say hello —
+I'd love to hear from you.
+
+</p>
+
+
+<a href="#message" class="hero-arrow">
+↓
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT INTRO
+===================================================== -->
+
+<section class="dark-section">
+
+<div class="container">
+
+<div class="contact-intro">
+
+
+<div>
+
+<p class="label">
+LET'S CONNECT
+</p>
+
+<h2>
+Start with<br>
+a hello.
+</h2>
+
+</div>
+
+
+<div class="contact-intro-right">
+
+<p>
+
+You don't need to have the perfect question
+or a perfectly written message.
+
+Just share what's on your mind and
+we'll take it from there.
+
+</p>
+
+
+<a
+href="mailto:hello@chandiniconnects.com"
+class="email-large"
+>
+hello@chandiniconnects.com
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHAT BRINGS YOU HERE
+===================================================== -->
+
+<section class="why">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+What brings<br>
+you here?
+</h2>
+
+<p>
+Every conversation can begin somewhere.
+Choose what feels closest to where you are
+right now.
+</p>
+
+</div>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<span class="card-number">
+01 / CAREER
+</span>
+
+<div class="card-icon">
+↗
+</div>
+
+<h3>
+I'm figuring out<br>
+my next move.
+</h3>
+
+<p>
+Career direction, interviews, resumes
+or simply wanting some clarity.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<span class="card-number">
+02 / GROWTH
+</span>
+
+<div class="card-icon">
+✦
+</div>
+
+<h3>
+I want to grow<br>
+with intention.
+</h3>
+
+<p>
+Goals, habits, confidence and creating
+a better rhythm for yourself.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<span class="card-number">
+03 / COLLABORATE
+</span>
+
+<div class="card-icon">
++
+</div>
+
+<h3>
+I have an idea<br>
+to explore.
+</h3>
+
+<p>
+Content, collaborations, projects
+or something you'd like to build.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MESSAGE
+===================================================== -->
+
+<section class="message" id="message">
+
+<div class="container">
+
+<div class="message-grid">
+
+
+<div class="message-copy">
+
+<p class="label">
+YOUR MESSAGE
+</p>
+
+<h2>
+Tell me<br>
+what's on<br>
+your mind.
+</h2>
+
+<p>
+Keep it simple. Tell me who you are,
+what you're working on, or what you'd
+like to talk about.
+</p>
+
+</div>
+
+
+
+<form class="form" id="contactForm">
+
+
+<div class="field">
+
+<label>
+Your Name
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Your name"
+required
+>
+
+</div>
+
+
+
+<div class="field">
+
+<label>
+Your Email
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="you@example.com"
+required
+>
+
+</div>
+
+
+
+<div class="field">
+
+<label>
+Message
+</label>
+
+<textarea
+id="messageText"
+placeholder="Write your message..."
+required
+></textarea>
+
+</div>
+
+
+
+<button
+type="submit"
+class="send"
+>
+SEND MESSAGE →
+</button>
+
+
+<div
+class="success"
+id="success"
+>
+Thank you for reaching out.
+Your message is ready to be sent.
+</div>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SOCIAL
+===================================================== -->
+
+<section class="social">
+
+<div class="container">
+
+<span class="label">
+FOLLOW ALONG
+</span>
+
+<h2>
+Stay connected beyond this page.
+</h2>
+
+<p>
+More ideas, conversations and little reminders
+to keep moving forward.
+</p>
+
+
+<div class="social-links">
+
+<a
+href="https://www.instagram.com/chandini_connects/" class="social"
+class="social-link"
+target="_blank"
+>
+INSTAGRAM ↗
+</a>
+
+<a
+href="https://www.youtube.com/@chandiniconnects/featured" class="social"
+class="social-link"
+target="_blank"
+>
+YOUTUBE ↗
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUOTE
+===================================================== -->
+
+<section class="quote">
+
+<span>
+ONE LAST THING
+</span>
+
+<h2>
+“You don't need to have everything
+figured out. You just need a clear
+enough next step.”
+</h2>
+
+</section>
+
+
+
+<!-- =========================================
+     CHANDINI CONNECTS FOOTER
+========================================= -->
+
+<footer class="chandini-footer">
+
+  <!-- FOOTER ART -->
+  <div class="footer-art">
+    <img src="footer.webp" alt="Chandini Connects">
+  </div>
+
+
+  <!-- MAIN FOOTER -->
+  <div class="footer-main">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+
+      <h2>Chandini</h2>
+      <span>CONNECTS</span>
+
+      <p>
+        Learn with clarity.<br>
+        Grow with confidence.<br>
+        Create with purpose.
+      </p>
+
+    </div>
+
+
+    <!-- LINKS -->
+    <div class="footer-links">
+
+      <div class="footer-link-group">
+
+        <span>EXPLORE</span>
+
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#courses">Courses</a>
+        <a href="#workshops">Workshops</a>
+
+      </div>
+
+
+      <div class="footer-link-group">
+
+        <span>CONNECT</span>
+
+        <a href="#contact">Contact</a>
+
+        <a href="https://www.instagram.com/chandini_connects/"
+           target="_blank">
+          Instagram
+        </a>
+
+        <a href="#" target="_blank">
+          YouTube
+        </a>
+
+        <a href="#" target="_blank">
+          WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- CONNECT -->
+    <div class="footer-connect">
+
+      <span>LET'S CONNECT</span>
+
+      <h3>
+        Let’s learn,<br>
+        grow & <em>create.</em>
+      </h3>
+
+      <div class="footer-socials">
+
+        <a href="https://www.instagram.com/chandini_connects/"
+           target="_blank"
+           aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#"
+           target="_blank"
+           aria-label="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="#"
+           target="_blank"
+           aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="mailto:chandiniconnects@gmail.com"
+           aria-label="Email">
+          <i class="fa-regular fa-envelope"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+
+    <span>
+      © 2026 CHANDINI CONNECTS
+    </span>
+
+    <span>
+      LEARN • GROW • CREATE • TOGETHER
+    </span>
+
+    <a href="#top">
+      BACK TO TOP ↑
+    </a>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const name =
+document.getElementById("name").value;
+
+const email =
+document.getElementById("email").value;
+
+const message =
+document.getElementById("messageText").value;
+
+
+/*
+   Opens the user's email application
+   with the message already prepared.
+*/
+
+const subject =
+encodeURIComponent(
+"Message from " + name
+);
+
+const body =
+encodeURIComponent(
+
+"Name: " + name +
+"\nEmail: " + email +
+"\n\nMessage:\n" + message
+
+);
+
+
+window.location.href =
+"mailto:hello@chandiniconnects.com" +
+"?subject=" + subject +
+"&body=" + body;
+
+
+document
+.getElementById("success")
+.style.display="block";
+
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const footer =
+    document.querySelector(".chandini-footer");
+
+  if (!footer) return;
+
+
+  const footerObserver =
+    new IntersectionObserver(
+      function (entries) {
+
+        entries.forEach(function (entry) {
+
+          if (entry.isIntersecting) {
+
+            footer.classList.add(
+              "footer-visible"
+            );
+
+            footerObserver.unobserve(
+              footer
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.08
+      }
+    );
+
+
+  footerObserver.observe(footer);
+
+});
+</script>
+
+</script>
+
+
+</body>
+
+</html>
